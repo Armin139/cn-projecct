@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/ansainet/examples/ansa/hsrp/testActiveDown/results.vec"/>
+    <inputs name="/ansainet/examples/ansa/hsrp/testActiveDown/results.sca"/>
+    <inputs name="*.vec"/>
+    <inputs name="*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="General  #0">
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.udp) AND name(&quot;sentPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.udp) AND name(&quot;sentPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.udp) AND name(&quot;sentPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].encap) AND name(&quot;encapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].encap) AND name(&quot;encapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].encap) AND name(&quot;encapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[1].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[1].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[2].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[2].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[1].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[2].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[3].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[4].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[0].mac) AND name(&quot;rxPkFromHL:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[3].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[4].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC1.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC1.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC2.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC2.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC1.eth[0].encap) AND name(&quot;decapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.PC2.eth[0].encap) AND name(&quot;decapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[0].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[1].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.SW1.eth[2].mac) AND name(&quot;txPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].mac) AND name(&quot;rxPkOk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].mac) AND name(&quot;passedUpPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.eth[0].encap) AND name(&quot;decapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.eth[0].encap) AND name(&quot;decapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.eth[0].encap) AND name(&quot;decapPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.udp) AND name(&quot;rcvdPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R1.udp) AND name(&quot;passedUpPk:vector(count)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.udp) AND name(&quot;rcvdPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R2.udp) AND name(&quot;passedUpPk:vector(count)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.udp) AND name(&quot;rcvdPk:vector(packetBytes)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(testActiveDown.R3.udp) AND name(&quot;passedUpPk:vector(count)&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Group" name="General  #0">
+        <items xsi:type="scave:Compute" operation="mean"/>
+        <items xsi:type="scave:LineChart" name="General  #0"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets/>
+</scave:Analysis>

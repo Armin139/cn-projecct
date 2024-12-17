@@ -1,0 +1,599 @@
+file 77098 1733975091                                           
+version 2
+run General-0-20241211-19:41:34-5872
+attr configname General
+attr datetime 20241211-19:41:34
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network OSPF_AreaTest
+attr processid 5872
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H1.numUdpApps 2
+param **.H1.udpApp[1].destAddresses "\"Area2.H3\""
+param **.H2.numUdpApps 2
+param **.H2.udpApp[1].destAddresses "\"Area2.H3\""
+param **.H3.numUdpApps 3
+param **.H3.udpApp[1].destAddresses "\"Area1.H1\""
+param **.H3.udpApp[2].destAddresses "\"Area1.H2\""
+param **.arp.cacheTimeout 1s
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.udpApp[0].localPort 1234
+param **.udpApp[0].typename "\"UDPEchoApp\""
+param **.udpApp[1..].destPort 1234
+param **.udpApp[1..].messageLength "32 bytes"
+param **.udpApp[1..].sendInterval 0.1s
+param **.udpApp[1..].typename "\"UDPBasicApp\""
+
+vector 254  OSPF_AreaTest.Area2.R4.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 250  OSPF_AreaTest.Area2.R4.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 245  OSPF_AreaTest.Area2.R4.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 229  OSPF_AreaTest.Area2.R5.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 230  OSPF_AreaTest.Area2.R5.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 238  OSPF_AreaTest.Area2.R5.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 81  OSPF_AreaTest.Area1.R3.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 77  OSPF_AreaTest.Area1.R3.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 72  OSPF_AreaTest.Area1.R3.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 8  OSPF_AreaTest.Area1.R1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 9  OSPF_AreaTest.Area1.R1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 17  OSPF_AreaTest.Area1.R1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 16  OSPF_AreaTest.Area1.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 12  OSPF_AreaTest.Area1.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 7  OSPF_AreaTest.Area1.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 73  OSPF_AreaTest.Area1.R3.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 74  OSPF_AreaTest.Area1.R3.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 82  OSPF_AreaTest.Area1.R3.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 43  OSPF_AreaTest.Area1.R3.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 3  OSPF_AreaTest.Area1.R1.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 266  OSPF_AreaTest.Area2.R4.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 262  OSPF_AreaTest.Area2.R4.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 257  OSPF_AreaTest.Area2.R4.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 49  OSPF_AreaTest.Area1.R3.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 50  OSPF_AreaTest.Area1.R3.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 58  OSPF_AreaTest.Area1.R3.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 225  OSPF_AreaTest.Area2.R5.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 221  OSPF_AreaTest.Area2.R5.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 179  OSPF_AreaTest.Area2.N3  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 216  OSPF_AreaTest.Area2.R5.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 200  OSPF_AreaTest.Area2.H3.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 201  OSPF_AreaTest.Area2.H3.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 209  OSPF_AreaTest.Area2.H3.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 69  OSPF_AreaTest.Area1.R3.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 65  OSPF_AreaTest.Area1.R3.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 60  OSPF_AreaTest.Area1.R3.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 156  OSPF_AreaTest.Area1.R2.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 157  OSPF_AreaTest.Area1.R2.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 165  OSPF_AreaTest.Area1.R2.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 176  OSPF_AreaTest.Area1.R2.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 172  OSPF_AreaTest.Area1.R2.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 1  OSPF_AreaTest.Area1.N2  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 167  OSPF_AreaTest.Area1.R2.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 127  OSPF_AreaTest.Area1.H2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 128  OSPF_AreaTest.Area1.H2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 136  OSPF_AreaTest.Area1.H2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 152  OSPF_AreaTest.Area1.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 148  OSPF_AreaTest.Area1.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 143  OSPF_AreaTest.Area1.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 20  OSPF_AreaTest.Area1.R1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 21  OSPF_AreaTest.Area1.R1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 29  OSPF_AreaTest.Area1.R1.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 86  OSPF_AreaTest.Area1.H1.udpApp[1]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 113  OSPF_AreaTest.Area1.H2.udpApp[1]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 182  OSPF_AreaTest.Area2.H3.udpApp[1]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 186  OSPF_AreaTest.Area2.H3.udpApp[2]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 89  OSPF_AreaTest.Area1.H1.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 116  OSPF_AreaTest.Area1.H2.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 189  OSPF_AreaTest.Area2.H3.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 94  OSPF_AreaTest.Area1.H1.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 121  OSPF_AreaTest.Area1.H2.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 194  OSPF_AreaTest.Area2.H3.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 108  OSPF_AreaTest.Area1.H1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 135  OSPF_AreaTest.Area1.H2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 208  OSPF_AreaTest.Area2.H3.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 104  OSPF_AreaTest.Area1.H1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 131  OSPF_AreaTest.Area1.H2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 204  OSPF_AreaTest.Area2.H3.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 0  OSPF_AreaTest.Area1.N1  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 99  OSPF_AreaTest.Area1.H1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 126  OSPF_AreaTest.Area1.H2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 199  OSPF_AreaTest.Area2.H3.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 32  OSPF_AreaTest.Area1.R1.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 33  OSPF_AreaTest.Area1.R1.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 168  OSPF_AreaTest.Area1.R2.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 169  OSPF_AreaTest.Area1.R2.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 217  OSPF_AreaTest.Area2.R5.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 218  OSPF_AreaTest.Area2.R5.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 41  OSPF_AreaTest.Area1.R1.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 177  OSPF_AreaTest.Area1.R2.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 226  OSPF_AreaTest.Area2.R5.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 237  OSPF_AreaTest.Area2.R5.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 233  OSPF_AreaTest.Area2.R5.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 228  OSPF_AreaTest.Area2.R5.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 246  OSPF_AreaTest.Area2.R4.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 247  OSPF_AreaTest.Area2.R4.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 255  OSPF_AreaTest.Area2.R4.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 240  OSPF_AreaTest.Area2.R4.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 212  OSPF_AreaTest.Area2.R5.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 57  OSPF_AreaTest.Area1.R3.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 53  OSPF_AreaTest.Area1.R3.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 48  OSPF_AreaTest.Area1.R3.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 258  OSPF_AreaTest.Area2.R4.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 259  OSPF_AreaTest.Area2.R4.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 267  OSPF_AreaTest.Area2.R4.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 44  OSPF_AreaTest.Area1.R3.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 40  OSPF_AreaTest.Area1.R1.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 36  OSPF_AreaTest.Area1.R1.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 31  OSPF_AreaTest.Area1.R1.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 100  OSPF_AreaTest.Area1.H1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 101  OSPF_AreaTest.Area1.H1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 109  OSPF_AreaTest.Area1.H1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 28  OSPF_AreaTest.Area1.R1.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 24  OSPF_AreaTest.Area1.R1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 19  OSPF_AreaTest.Area1.R1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 144  OSPF_AreaTest.Area1.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 145  OSPF_AreaTest.Area1.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 153  OSPF_AreaTest.Area1.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 138  OSPF_AreaTest.Area1.R2.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 164  OSPF_AreaTest.Area1.R2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 160  OSPF_AreaTest.Area1.R2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 155  OSPF_AreaTest.Area1.R2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 61  OSPF_AreaTest.Area1.R3.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 62  OSPF_AreaTest.Area1.R3.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 70  OSPF_AreaTest.Area1.R3.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 139  OSPF_AreaTest.Area1.R2.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 241  OSPF_AreaTest.Area2.R4.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 2  OSPF_AreaTest.Area1.R1.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+0	22804 369 274 4020 0.1000001 14.1000001 17 72 90 1260 93960
+1	23173 371 230 4021 0.096347080613 14.1000001 17 72 90 1260 93960
+2	23544 25 2043 2043 5.108929927824 5.108929927824 1 1 1 1 1
+3	23569 98 69 3072 0.089483578282 10.089558298282 4 1 1 4 4
+7	23667 454 55 3434 0.089477618282 11.0000072 18 64 178 1734 183612
+8	24121 487 46 3086 0.089235722814 10.089573378282 19 64 126 1704 160128
+9	24608 487 46 3086 0.089235722814 10.089573378282 19 64 126 1704 160128
+12	25095 456 54 3432 0.089470098282 11 18 64 178 1734 183612
+16	25551 456 53 3426 0.089470098282 11 18 28 160 1356 123024
+17	26007 500 47 3087 0.089235722814 10.089573378282 19 28 108 1308 100944
+19	26507 452 624 3286 0.108855327824 10.108855327824 17 64 130 1560 152280
+20	26959 394 241 3437 0.096850415973 11.0000073 15 64 126 1410 140692
+21	27353 394 241 3437 0.096850415973 11.0000073 15 64 126 1410 140692
+24	27747 444 623 3285 0.108847807824 10.108847807824 17 64 130 1560 152280
+28	28191 441 622 3284 0.108847807824 10.108847807824 17 28 112 1212 98448
+29	28632 394 242 3439 0.096850415973 11.0000073 15 28 108 1104 92128
+31	29026 52 615 3277 0.10853290675 10.10853290675 2 82 82 164 13448
+32	29078 349 280 4026 0.10000596 14.10000596 15 64 64 960 61440
+33	29427 349 280 4026 0.10000596 14.10000596 15 64 64 960 61440
+36	29776 52 613 3275 0.10852570675 10.10852570675 2 82 82 164 13448
+40	29828 52 612 3274 0.10852570675 10.10852570675 2 64 64 128 8192
+41	29880 349 283 4029 0.10000596 14.10000596 15 28 28 420 11760
+43	30229 155 60 3095 0.089477718282 10.089579998282 6 1 1 6 6
+44	30384 25 465 465 0.107212347093 0.107212347093 1 1 1 1 1
+48	30409 367 451 3266 0.107206387093 10.107206387093 14 64 130 1224 111120
+49	30776 341 201 3151 0.089880700851 10.089881020851 13 64 110 1118 99020
+50	31117 341 201 3151 0.089880700851 10.089881020851 13 64 110 1118 99020
+53	31458 359 450 3265 0.107198867093 10.107198867093 14 64 130 1224 111120
+57	31817 357 449 3264 0.107198867093 10.107198867093 14 28 112 936 68928
+58	32174 338 202 3152 0.089880700851 10.089881020851 13 28 92 848 60320
+60	32512 347 220 3170 0.092517247472 10.092517567472 13 64 150 1214 121836
+61	32859 348 797 3297 0.119770908281 10.119770908281 13 64 150 1250 129932
+62	33207 348 797 3297 0.119770908281 10.119770908281 13 64 150 1250 129932
+65	33555 339 219 3169 0.092510047472 10.092510047472 13 64 150 1214 121836
+69	33894 336 218 3168 0.092510047472 10.092510047472 13 28 132 944 79680
+70	34230 347 798 3298 0.119770908281 10.119770908281 13 28 132 980 86480
+72	34577 506 45 3085 0.089235622814 10.089573278282 19 64 126 1704 160128
+73	35083 472 56 3436 0.089477718282 11.0000073 18 64 178 1734 183612
+74	35555 472 56 3436 0.089477718282 11.0000073 18 64 178 1734 183612
+77	36027 497 44 3083 0.089228422814 10.089564158282 19 64 126 1704 160128
+81	36524 491 43 3082 0.089228422814 10.089564158282 19 28 108 1308 100944
+82	37015 472 57 3438 0.089477718282 11.0000073 18 28 160 1356 123024
+86	37487 2278 246 4048 0.1 14.2 142 32 32 4544 145408
+89	39765 2278 251 4052 0.1 14.2 142 40 40 5680 227200
+94	42043 229 258 3992 0.1 14.1 15 1 1 15 15
+99	42272 349 277 4023 0.10000576 14.10000576 15 64 64 960 61440
+100	42621 54 616 3278 0.10853310675 10.10853310675 2 82 82 164 13448
+101	42675 54 616 3278 0.10853310675 10.10853310675 2 82 82 164 13448
+104	42729 259 270 4016 0.1 14.1 15 64 64 960 61440
+108	42988 259 266 4008 0.1 14.1 15 28 28 420 11760
+109	43247 54 617 3279 0.10853310675 10.10853310675 2 64 64 128 8192
+113	43301 2420 247 4049 0.1 14.2 142 32 32 4544 145408
+116	45721 2420 253 4053 0.1 14.2 142 40 40 5680 227200
+121	48141 244 259 3993 0.1 14.1 15 1 1 15 15
+126	48385 364 278 4024 0.10000576 14.10000576 15 64 64 960 61440
+127	48749 56 232 3182 0.096354380613 10.096354380613 2 82 82 164 13448
+128	48805 56 232 3182 0.096354380613 10.096354380613 2 82 82 164 13448
+131	48861 259 271 4017 0.1 14.1 15 64 64 960 61440
+135	49120 259 267 4009 0.1 14.1 15 28 28 420 11760
+136	49379 56 233 3183 0.096354380613 10.096354380613 2 64 64 128 8192
+138	49435 26 629 629 0.108855427824 0.108855427824 1 1 1 1 1
+139	49461 81 810 3112 0.119776768281 10.089585858282 3 1 1 3 3
+143	49542 409 240 3435 0.096850315973 11.0000072 15 64 126 1410 140692
+144	49951 469 625 3287 0.108855427824 10.108855427824 17 64 130 1560 152280
+145	50420 469 625 3287 0.108855427824 10.108855427824 17 64 130 1560 152280
+148	50889 393 239 3433 0.096843115973 11 15 64 126 1410 140692
+152	51282 393 238 3427 0.096843115973 11 15 28 108 1104 92128
+153	51675 466 626 3288 0.108855427824 10.108855427824 17 28 112 1212 98448
+155	52141 361 796 3296 0.119770808281 10.119770808281 13 64 150 1250 129932
+156	52502 360 221 3171 0.092517347472 10.092517667472 13 64 150 1214 121836
+157	52862 360 221 3171 0.092517347472 10.092517667472 13 64 150 1214 121836
+160	53222 353 795 3295 0.119763288281 10.119763288281 13 64 150 1250 129932
+164	53575 352 794 3294 0.119763288281 10.119763288281 13 28 132 980 86480
+165	53927 357 222 3172 0.092517347472 10.092517667472 13 28 132 944 79680
+167	54284 56 231 3181 0.096354180613 10.096354180613 2 82 82 164 13448
+168	54340 364 281 4027 0.10000596 14.10000596 15 64 64 960 61440
+169	54704 364 281 4027 0.10000596 14.10000596 15 64 64 960 61440
+172	55068 56 229 3179 0.096346980613 10.096346980613 2 82 82 164 13448
+176	55124 56 228 3178 0.096346980613 10.096346980613 2 64 64 128 8192
+177	55180 364 284 4030 0.10000596 14.10000596 15 28 28 420 11760
+179	55544 769 210 4041 0.090262127451 14.10000682 32 72 90 2340 171720
+182	56313 2420 248 4050 0.1 14.2 142 32 32 4544 145408
+186	58733 2420 249 4051 0.1 14.2 142 32 32 4544 145408
+189	61153 4806 255 4007 0.1 14.1 282 40 40 11280 451200
+194	65959 488 260 3995 0.1 14.1 30 1 1 30 30
+199	66447 728 279 4042 0.10000576 14.10001248 30 64 64 1920 122880
+200	67175 56 212 3162 0.090269427451 10.090269427451 2 82 82 164 13448
+201	67231 56 212 3162 0.090269427451 10.090269427451 2 82 82 164 13448
+204	67287 518 272 4019 0.1 14.1 30 64 64 1920 122880
+208	67805 518 268 4011 0.1 14.1 30 28 28 840 23520
+209	68323 56 213 3163 0.090269427451 10.090269427451 2 64 64 128 8192
+212	68379 53 320 1975 0.106758184792 5.106831944792 2 1 1 2 2
+216	68432 56 211 3161 0.090269227451 10.090269227451 2 82 82 164 13448
+217	68488 728 282 4043 0.10000596 14.10001268 30 64 64 1920 122880
+218	69216 728 282 4043 0.10000596 14.10001268 30 64 64 1920 122880
+221	69944 56 209 3159 0.090262027451 10.090262027451 2 82 82 164 13448
+225	70000 56 208 3158 0.090262027451 10.090262027451 2 64 64 128 8192
+226	70056 728 285 4044 0.10000596 14.10001268 30 28 28 840 23520
+228	70784 327 306 3256 0.106752224792 10.106752224792 12 64 114 1032 92232
+229	71111 351 36 3038 0.08783500417 10.08783532417 13 64 110 1094 94892
+230	71462 351 36 3038 0.08783500417 10.08783532417 13 64 110 1094 94892
+233	71813 319 305 3255 0.106744704792 10.106744704792 12 64 114 1032 92232
+237	72132 316 304 3254 0.106744704792 10.106744704792 12 28 96 780 56304
+238	72448 348 37 3039 0.08783500417 10.08783532417 13 28 92 824 57056
+240	72796 79 311 1967 0.106752324792 5.106826084792 3 1 1 3 3
+241	72875 27 2013 2013 5.107296607093 5.107296607093 1 1 1 1 1
+245	72902 351 35 3037 0.08783490417 10.08783522417 13 64 110 1094 94892
+246	73253 327 307 3257 0.106752324792 10.106752324792 12 64 114 1032 92232
+247	73580 327 307 3257 0.106752324792 10.106752324792 12 64 114 1032 92232
+250	73907 343 34 3036 0.08782770417 10.08782770417 13 64 110 1094 94892
+254	74250 340 33 3035 0.08782770417 10.08782770417 13 28 92 824 57056
+255	74590 324 308 3258 0.106752324792 10.106752324792 12 28 96 780 56304
+257	74914 354 200 3150 0.089880600851 10.089880920851 13 64 110 1118 99020
+258	75268 381 452 3267 0.107206487093 10.107206487093 14 64 130 1224 111120
+259	75649 381 452 3267 0.107206487093 10.107206487093 14 64 130 1224 111120
+262	76030 346 199 3149 0.089873400851 10.089873400851 13 64 110 1118 99020
+266	76376 343 198 3148 0.089873400851 10.089873400851 13 28 92 848 60320
+267	76719 379 453 3268 0.107206487093 10.107206487093 14 28 112 936 68928

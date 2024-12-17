@@ -1,0 +1,367 @@
+file 21323 1733975267                                           
+version 2
+run mininet-A-0-20241211-19:46:51-10064
+attr configname mininet-A
+attr datetime 20241211-19:46:51
+attr experiment mininet-A
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network OSPF_mininet
+attr processid 10064
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H[*].numUdpApps 2
+param **.arp.cacheTimeout 1s
+param **.mtu 60000B
+param **.ospf.authenticationKey "\"0x00\""
+param **.ospf.authenticationType "\"NullType\""
+param **.ospf.helloInterval 10s
+param **.ospf.interfaceTransmissionDelay 1
+param **.ospf.ospfConfig "xmldoc(\"ASConfigMininet.xml\")"
+param **.ospf.retransmissionInterval 5s
+param **.ospf.routerDeadInterval 40s
+param **.udpApp[0].localPort 1234
+param **.udpApp[0].typename "\"UDPEchoApp\""
+param **.udpApp[1..].destPort 1234
+param **.udpApp[1..].messageLength "32 bytes"
+param **.udpApp[1..].sendInterval 0.1s
+param **.udpApp[1..].startTime 10s
+param **.udpApp[1..].typename "\"UDPBasicApp\""
+param *.BBR[0].routingTable.routerId "\"10.0.0.0\""
+param *.BBR[1].routingTable.routerId "\"10.0.0.1\""
+param *.S*H[*].numUdpApps 2
+param *.S1H[0].udpApp[1].destAddresses "\"S2H[0]\""
+param *.S1H[1].udpApp[1].destAddresses "\"S2H[1]\""
+param *.S1R[0].routingTable.routerId "\"10.0.1.110\""
+param *.S1R[1].routingTable.routerId "\"10.0.1.111\""
+param *.S1toBBR.routingTable.routerId "\"10.0.0.101\""
+param *.S2H[0].udpApp[1].destAddresses "\"S1H[0]\""
+param *.S2H[1].udpApp[1].destAddresses "\"S1H[1]\""
+param *.S2R[0].routingTable.routerId "\"10.0.1.220\""
+param *.S2R[1].routingTable.routerId "\"10.0.1.221\""
+param *.S2toBBR.routingTable.routerId "\"10.0.0.202\""
+param *.scenarioManager.script "xml(\"<empty/>\")"
+
+vector 225  OSPF_mininet.BBRtoS2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 221  OSPF_mininet.BBRtoS2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 216  OSPF_mininet.BBRtoS2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 246  OSPF_mininet.S2R[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 247  OSPF_mininet.S2R[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 255  OSPF_mininet.S2R[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 84  OSPF_mininet.BBRtoS1.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 80  OSPF_mininet.BBRtoS1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 75  OSPF_mininet.BBRtoS1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 93  OSPF_mininet.S1R[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 94  OSPF_mininet.S1R[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 102  OSPF_mininet.S1R[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 14  OSPF_mininet.BBR[0].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 10  OSPF_mininet.BBR[0].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 5  OSPF_mininet.BBR[0].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 64  OSPF_mininet.BBRtoS1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 65  OSPF_mininet.BBRtoS1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 73  OSPF_mininet.BBRtoS1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 237  OSPF_mininet.BBRtoS2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 233  OSPF_mininet.BBRtoS2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 228  OSPF_mininet.BBRtoS2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 35  OSPF_mininet.BBR[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 36  OSPF_mininet.BBR[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 44  OSPF_mininet.BBR[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 142  OSPF_mininet.S1R[1].eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 138  OSPF_mininet.S1R[1].eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 133  OSPF_mininet.S1R[1].eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 173  OSPF_mininet.S1H[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 174  OSPF_mininet.S1H[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 182  OSPF_mininet.S1H[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 72  OSPF_mininet.BBRtoS1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 68  OSPF_mininet.BBRtoS1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 63  OSPF_mininet.BBRtoS1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 6  OSPF_mininet.BBR[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 7  OSPF_mininet.BBR[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 15  OSPF_mininet.BBR[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 0  OSPF_mininet.BBR[0].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 59  OSPF_mininet.BBRtoS1.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 130  OSPF_mininet.S1R[1].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 126  OSPF_mininet.S1R[1].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 121  OSPF_mininet.S1R[1].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 105  OSPF_mininet.S1R[0].eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 106  OSPF_mininet.S1R[0].eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 114  OSPF_mininet.S1R[0].eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 101  OSPF_mininet.S1R[0].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 97  OSPF_mininet.S1R[0].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 92  OSPF_mininet.S1R[0].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 76  OSPF_mininet.BBRtoS1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 77  OSPF_mininet.BBRtoS1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 85  OSPF_mininet.BBRtoS1.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 58  OSPF_mininet.BBRtoS1.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 88  OSPF_mininet.S1R[0].networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 283  OSPF_mininet.S2R[1].eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 279  OSPF_mininet.S2R[1].eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 274  OSPF_mininet.S2R[1].eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 258  OSPF_mininet.S2R[0].eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 259  OSPF_mininet.S2R[0].eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 267  OSPF_mininet.S2R[0].eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 266  OSPF_mininet.S2R[0].eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 262  OSPF_mininet.S2R[0].eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 257  OSPF_mininet.S2R[0].eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 275  OSPF_mininet.S2R[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 276  OSPF_mininet.S2R[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 284  OSPF_mininet.S2R[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 269  OSPF_mininet.S2R[1].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 241  OSPF_mininet.S2R[0].networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+0	14010 24 103 103 0.092517667472 0.092517667472 1 1 1 1 1
+5	14034 201 69 219 0.089477298282 0.092602147472 8 64 114 690 62108
+6	14235 202 99 220 0.092517667472 0.092602147472 8 64 110 702 63612
+7	14437 202 99 220 0.092517667472 0.092602147472 8 64 110 702 63612
+10	14639 209 68 216 0.089470098282 0.092592387472 8 64 114 690 62108
+14	14848 207 67 215 0.089470098282 0.092592387472 8 28 96 528 38528
+15	15055 208 100 221 0.092517667472 0.092602147472 8 28 92 540 39600
+35	15263 25 80 80 0.089880700851 0.089880700851 1 82 82 82 6724
+36	15288 25 80 80 0.089880700851 0.089880700851 1 82 82 82 6724
+44	15313 25 81 81 0.089880700851 0.089880700851 1 64 64 64 4096
+58	15338 25 249 249 0.096850735973 0.096850735973 1 1 1 1 1
+59	15363 25 112 112 0.092523527472 0.092523527472 1 1 1 1 1
+63	15388 210 98 218 0.092517567472 0.092602047472 8 64 110 702 63612
+64	15598 209 70 224 0.089477398282 0.092602247472 8 64 114 690 62108
+65	15807 209 70 224 0.089477398282 0.092602247472 8 64 114 690 62108
+68	16016 210 97 207 0.092510047472 0.092585087472 8 64 110 702 63612
+72	16226 207 96 206 0.092510047472 0.092585087472 8 28 92 540 39600
+73	16433 207 71 225 0.089477398282 0.092602247472 8 28 96 528 38528
+75	16640 236 59 373 0.089235622814 0.096941455973 9 64 110 768 67840
+76	16876 210 245 379 0.096850735973 0.096941655973 8 64 114 694 62780
+77	17086 210 245 379 0.096850735973 0.096941655973 8 64 114 694 62780
+80	17296 236 58 362 0.089228422814 0.096924495973 9 64 110 768 67840
+84	17532 233 57 361 0.089228422814 0.096924495973 9 28 92 588 41776
+85	17765 208 246 380 0.096850735973 0.096941655973 8 28 96 532 39056
+88	17973 25 258 258 0.096856595973 0.096856595973 1 1 1 1 1
+92	17998 210 244 374 0.096850635973 0.096941555973 8 64 114 694 62780
+93	18208 236 60 375 0.089235722814 0.096941555973 9 64 110 768 67840
+94	18444 236 60 375 0.089235722814 0.096941555973 9 64 110 768 67840
+97	18680 210 243 371 0.096843115973 0.096931795973 8 64 114 694 62780
+101	18890 216 242 370 0.096843115973 0.096931795973 8 28 96 532 39056
+102	19106 242 61 376 0.089235722814 0.096941555973 9 28 92 588 41776
+105	19348 27 235 235 0.096354280613 0.096354280613 1 82 82 82 6724
+106	19375 27 235 235 0.096354280613 0.096354280613 1 82 82 82 6724
+114	19402 27 236 236 0.096354280613 0.096354280613 1 64 64 64 4096
+121	19429 27 234 234 0.096354180613 0.096354180613 1 82 82 82 6724
+126	19456 27 233 233 0.096346980613 0.096346980613 1 82 82 82 6724
+130	19483 27 232 232 0.096346980613 0.096346980613 1 64 64 64 4096
+133	19510 26 89 89 0.090269227451 0.090269227451 1 82 82 82 6724
+138	19536 26 88 88 0.090262027451 0.090262027451 1 82 82 82 6724
+142	19562 26 87 87 0.090262027451 0.090262027451 1 64 64 64 4096
+173	19588 26 90 90 0.090269327451 0.090269327451 1 82 82 82 6724
+174	19614 26 90 90 0.090269327451 0.090269327451 1 82 82 82 6724
+182	19640 26 91 91 0.090269327451 0.090269327451 1 64 64 64 4096
+216	19666 25 49 49 0.08783490417 0.08783490417 1 82 82 82 6724
+221	19691 25 48 48 0.08782770417 0.08782770417 1 82 82 82 6724
+225	19716 25 47 47 0.08782770417 0.08782770417 1 64 64 64 4096
+228	19741 26 79 79 0.089880600851 0.089880600851 1 82 82 82 6724
+233	19767 26 78 78 0.089873400851 0.089873400851 1 82 82 82 6724
+237	19793 26 77 77 0.089873400851 0.089873400851 1 64 64 64 4096
+241	19819 26 413 413 0.098009801822 0.098009801822 1 1 1 1 1
+246	19845 25 50 50 0.08783500417 0.08783500417 1 82 82 82 6724
+247	19870 25 50 50 0.08783500417 0.08783500417 1 82 82 82 6724
+255	19895 25 51 51 0.08783500417 0.08783500417 1 64 64 64 4096
+257	19920 108 399 453 0.098003841822 0.098042521822 4 64 90 310 24492
+258	20028 108 390 445 0.097457992058 0.098034681822 4 64 82 286 20620
+259	20136 108 390 445 0.097457992058 0.098034681822 4 64 82 286 20620
+262	20244 108 398 451 0.097996321822 0.098034681822 4 64 90 310 24492
+266	20352 108 397 450 0.097996321822 0.098034681822 4 28 72 220 13296
+267	20460 108 391 446 0.097457992058 0.098034681822 4 28 64 196 10288
+269	20568 26 404 404 0.098003941822 0.098003941822 1 1 1 1 1
+274	20594 108 389 444 0.097457892058 0.098034581822 4 64 82 286 20620
+275	20702 108 400 454 0.098003941822 0.098042621822 4 64 90 310 24492
+276	20810 108 400 454 0.098003941822 0.098042621822 4 64 90 310 24492
+279	20918 135 388 462 0.097450692058 0.098042621822 5 64 90 376 28720
+283	21053 162 387 461 0.097450692058 0.098042621822 6 28 72 324 18608
+284	21215 108 401 455 0.098003941822 0.098042621822 4 28 72 220 13296

@@ -1,0 +1,537 @@
+version 2
+run General-0-20241211-19:52:18-11732
+attr configname General
+attr datetime 20241211-19:52:18
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Backbone
+attr processid 11732
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H1.udpApp[0].destAddresses "\"192.168.4.1\""
+param **.H2.udpApp[0].destAddresses "\"192.168.2.2\""
+param **.arp.cacheTimeout 1s
+param **.numUdpApps 2
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.udpApp[0].destPort 1234
+param **.udpApp[0].messageLength "32 bytes"
+param **.udpApp[0].sendInterval 0.1s
+param **.udpApp[0].typename "\"UDPBasicApp\""
+param **.udpApp[1].localPort 1234
+param **.udpApp[1].typename "\"UDPEchoApp\""
+
+vector 177  Backbone.R7.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 173  Backbone.R7.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 2  Backbone.N4  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 168  Backbone.R7.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 264  Backbone.H2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 265  Backbone.H2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 152  Backbone.R5.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 153  Backbone.R5.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 53  Backbone.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 54  Backbone.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 273  Backbone.H2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 161  Backbone.R5.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 62  Backbone.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 90  Backbone.R4.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 86  Backbone.R4.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 5  Backbone.N3  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 81  Backbone.R4.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 36  Backbone.R1.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 37  Backbone.R1.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 45  Backbone.R1.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 20  Backbone.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 16  Backbone.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 0  Backbone.N1  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 11  Backbone.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 65  Backbone.R2.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 66  Backbone.R2.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 74  Backbone.R2.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 189  Backbone.R7.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 185  Backbone.R7.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 4  Backbone.N6  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 180  Backbone.R7.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 94  Backbone.R4.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 95  Backbone.R4.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 210  Backbone.R6.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 211  Backbone.R6.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 103  Backbone.R4.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 219  Backbone.R6.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 148  Backbone.R5.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 144  Backbone.R5.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 3  Backbone.N5  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 139  Backbone.R5.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 198  Backbone.R6.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 199  Backbone.R6.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 111  Backbone.R3.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 112  Backbone.R3.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 207  Backbone.R6.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 120  Backbone.R3.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 73  Backbone.R2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 69  Backbone.R2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 64  Backbone.R2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 12  Backbone.R1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 13  Backbone.R1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 21  Backbone.R1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 6  Backbone.R1.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 48  Backbone.R2.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 131  Backbone.R3.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 127  Backbone.R3.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 1  Backbone.N2  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 122  Backbone.R3.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 237  Backbone.H1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 238  Backbone.H1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 24  Backbone.R1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 25  Backbone.R1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 246  Backbone.H1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 33  Backbone.R1.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 102  Backbone.R4.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 98  Backbone.R4.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 93  Backbone.R4.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 181  Backbone.R7.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 182  Backbone.R7.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 190  Backbone.R7.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 163  Backbone.R7.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 77  Backbone.R4.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 217  Backbone.R6.eth[1].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+0	65	0.089470198282	90
+0	106	0.092510147472	94
+0	116	0.092517867472	72
+0	126	0.092523827472	72
+0	135	0.092529787472	78
+0	145	0.092536227472	78
+0	155	0.092542667472	98
+0	168	0.092550707472	98
+0	181	0.092558747472	78
+0	183	0.092559507472	82
+0	190	0.092565947472	82
+0	208	0.092572707472	122
+0	210	0.092573467472	134
+0	228	0.092584387472	122
+0	230	0.092585147472	134
+1	247	0.096347080613	90
+2	36	0.08782780417	90
+3	91	0.090262127451	90
+4	76	0.089873500851	90
+4	261	0.096843215973	94
+4	275	0.096850935973	72
+4	289	0.096856895973	72
+4	299	0.096862855973	78
+4	310	0.096869295973	78
+4	321	0.096875735973	98
+4	335	0.096883775973	98
+5	54	0.089228522814	90
+6	112	0.092517767472	1
+11	66	0.089477298282	82
+11	118	0.092523527472	64
+11	137	0.092535927472	70
+11	157	0.092550407472	90
+11	184	0.092564887472	70
+11	200	0.092572407472	74
+11	220	0.092584087472	126
+11	237	0.092595767472	126
+12	108	0.092517767472	86
+12	129	0.092529687472	64
+12	148	0.092542567472	70
+12	171	0.092558647472	90
+12	192	0.092566167472	74
+12	212	0.092582567472	114
+12	232	0.092594247472	114
+13	108	0.092517767472	86
+13	129	0.092529687472	64
+13	148	0.092542567472	70
+13	171	0.092558647472	90
+13	192	0.092566167472	74
+13	212	0.092582567472	114
+13	232	0.092594247472	114
+16	64	0.089470098282	82
+16	115	0.092517767472	64
+16	134	0.092529687472	70
+16	154	0.092542567472	90
+16	179	0.092558647472	70
+16	180	0.092558647472	74
+16	198	0.092566167472	126
+16	218	0.092582567472	126
+20	63	0.089470098282	64
+20	114	0.092517767472	28
+20	133	0.092529687472	52
+20	153	0.092542567472	72
+20	177	0.092558647472	52
+20	178	0.092558647472	56
+20	197	0.092566167472	108
+20	217	0.092582567472	108
+21	109	0.092517767472	68
+21	130	0.092529687472	28
+21	149	0.092542567472	52
+21	172	0.092558647472	72
+21	193	0.092566167472	56
+21	213	0.092582567472	96
+21	233	0.092594247472	96
+24	250	0.096354380613	82
+25	250	0.096354380613	82
+33	252	0.096354380613	64
+36	56	0.089235822814	82
+37	56	0.089235822814	82
+45	57	0.089235822814	64
+48	122	0.092523727472	1
+53	40	0.08783510417	82
+54	40	0.08783510417	82
+62	43	0.08783510417	64
+64	107	0.092517567472	86
+64	128	0.092529487472	64
+64	147	0.092542367472	70
+64	170	0.092558447472	90
+64	191	0.092565967472	74
+64	211	0.092582367472	114
+64	231	0.092594047472	114
+65	67	0.089477498282	82
+65	119	0.092523727472	64
+65	138	0.092536127472	70
+65	158	0.092550607472	90
+65	185	0.092565087472	70
+65	201	0.092572607472	74
+65	221	0.092584287472	126
+65	238	0.092595967472	126
+66	67	0.089477498282	82
+66	119	0.092523727472	64
+66	138	0.092536127472	70
+66	158	0.092550607472	90
+66	185	0.092565087472	70
+66	201	0.092572607472	74
+66	221	0.092584287472	126
+66	238	0.092595967472	126
+69	105	0.092510047472	86
+69	125	0.092523727472	64
+69	144	0.092536127472	70
+69	166	0.092550607472	90
+69	167	0.092550607472	74
+69	207	0.092572607472	114
+69	227	0.092584287472	114
+73	104	0.092510047472	68
+73	124	0.092523727472	28
+73	143	0.092536127472	52
+73	164	0.092550607472	72
+73	165	0.092550607472	56
+73	206	0.092572607472	96
+73	226	0.092584287472	96
+74	68	0.089477498282	64
+74	120	0.092523727472	28
+74	139	0.092536127472	52
+74	159	0.092550607472	72
+74	186	0.092565087472	52
+74	202	0.092572607472	56
+74	222	0.092584287472	108
+74	239	0.092595967472	108
+77	284	0.096856795973	1
+81	55	0.089235622814	82
+86	53	0.089228422814	82
+90	52	0.089228422814	64
+93	262	0.096850635973	86
+93	291	0.096862555973	64
+93	312	0.096875435973	70
+93	337	0.096891515973	90
+94	78	0.089880800851	82
+94	278	0.096856795973	64
+94	302	0.096869195973	70
+94	324	0.096883675973	90
+95	78	0.089880800851	82
+95	278	0.096856795973	64
+95	302	0.096869195973	70
+95	324	0.096883675973	90
+98	260	0.096843115973	86
+98	288	0.096856795973	64
+98	309	0.096869195973	70
+98	333	0.096883675973	90
+98	334	0.096883675973	74
+102	259	0.096843115973	68
+102	287	0.096856795973	28
+102	308	0.096869195973	52
+102	331	0.096883675973	72
+102	332	0.096883675973	56
+103	80	0.089880800851	64
+103	280	0.096856795973	28
+103	304	0.096869195973	52
+103	326	0.096883675973	72
+111	94	0.090269427451	82
+112	94	0.090269427451	82
+120	96	0.090269427451	64
+122	248	0.096354180613	82
+127	246	0.096346980613	82
+131	245	0.096346980613	64
+139	92	0.090269227451	82
+144	90	0.090262027451	82
+148	89	0.090262027451	64
+152	39	0.08783510417	82
+153	39	0.08783510417	82
+161	42	0.08783510417	64
+163	271	0.096850835973	1
+168	37	0.08783490417	82
+173	35	0.08782770417	82
+177	34	0.08782770417	64
+180	77	0.089880600851	82
+180	277	0.096856595973	64
+180	301	0.096868995973	70
+180	323	0.096883475973	90
+181	263	0.096850835973	86
+181	292	0.096862755973	64
+181	313	0.096875635973	70
+181	338	0.096891715973	90
+182	263	0.096850835973	86
+182	292	0.096862755973	64
+182	313	0.096875635973	70
+182	338	0.096891715973	90
+185	75	0.089873400851	82
+185	274	0.096850835973	64
+185	298	0.096862755973	70
+185	320	0.096875635973	90
+189	74	0.089873400851	64
+189	273	0.096850835973	28
+189	297	0.096862755973	52
+189	319	0.096875635973	72
+190	265	0.096850835973	68
+190	294	0.096862755973	28
+190	315	0.096875635973	52
+190	340	0.096891715973	72
+198	93	0.090269427451	82
+199	93	0.090269427451	82
+207	95	0.090269427451	64
+210	79	0.089880800851	82
+210	264	0.096850835973	86
+210	279	0.096856795973	64
+211	79	0.089880800851	82
+211	264	0.096850835973	86
+211	279	0.096856795973	64
+217	293	0.096862755973	64
+217	303	0.096869195973	70
+217	314	0.096875635973	70
+217	325	0.096883675973	90
+217	339	0.096891715973	90
+219	81	0.089880800851	64
+219	266	0.096850835973	68
+219	281	0.096856795973	28
+237	249	0.096354380613	82
+238	249	0.096354380613	82
+246	251	0.096354380613	64
+264	38	0.08783510417	82
+265	38	0.08783510417	82
+273	41	0.08783510417	64

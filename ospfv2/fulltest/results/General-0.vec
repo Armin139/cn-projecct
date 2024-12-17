@@ -1,0 +1,1902 @@
+version 2
+run General-0-20241211-20:16:50-9188
+attr configname General
+attr datetime 20241211-20:16:50
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network OSPF_RFC2328_Fig6
+attr processid 9188
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Area1.N1.host[0].udpApp[1].destAddresses "\"Area1.N4.host[0]\""
+param **.Area1.N2.host[0].udpApp[1].destAddresses "\"Area2.N6.host[0]\""
+param **.Area1.N3.host[0].udpApp[1].destAddresses "\"Area3.N10.host[0]\""
+param **.Area1.N4.host[0].udpApp[1].destAddresses "\"N12.host[0]\""
+param **.Area2.N6.host[0].udpApp[1].destAddresses "\"Area1.N1.host[0]\""
+param **.Area2.N7.host[0].udpApp[1].destAddresses "\"Area2.N8.host[0]\""
+param **.Area2.N7.host[1].udpApp[1].destAddresses "\"N13.host[0]\""
+param **.Area2.N8.host[0].udpApp[1].destAddresses "\"Area3.N9.host[0]\""
+param **.Area3.H1.udpApp[1].destAddresses "\"Area3.N11.host[0]\""
+param **.Area3.N10.host[0].udpApp[1].destAddresses "\"N15.host[0]\""
+param **.Area3.N11.host[0].udpApp[1].destAddresses "\"Area1.N2.host[0]\""
+param **.Area3.N9.host[0].udpApp[1].destAddresses "\"Area2.N7.host[0]\""
+param **.H1.numUdpApps 2
+param **.H1.udpApp[1].destAddresses "\"Area1.N3.host[0]\""
+param **.N12.host[0].udpApp[1].destAddresses "\"Area3.H1\""
+param **.N13.host[0].udpApp[1].destAddresses "\"Area1.N3.host[0]\""
+param **.N14.host[0].udpApp[1].destAddresses "\"Area2.N7.host[1]\""
+param **.N15.host[0].udpApp[1].destAddresses "\"N14.host[0]\""
+param **.N7.host[1].numUdpApps 2
+param **.arp.cacheTimeout 1s
+param **.host[0].numUdpApps 2
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.udpApp[0].localPort 1234
+param **.udpApp[0].typename "\"UDPEchoApp\""
+param **.udpApp[1..].destPort 1234
+param **.udpApp[1..].messageLength "32 bytes"
+param **.udpApp[1..].sendInterval 0.1s
+param **.udpApp[1..].startTime 10s
+param **.udpApp[1..].typename "\"UDPBasicApp\""
+param *.usenew true
+
+vector 761  OSPF_RFC2328_Fig6.RT6.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 757  OSPF_RFC2328_Fig6.RT6.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 752  OSPF_RFC2328_Fig6.RT6.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 676  OSPF_RFC2328_Fig6.RT5.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 677  OSPF_RFC2328_Fig6.RT5.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 685  OSPF_RFC2328_Fig6.RT5.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 855  OSPF_RFC2328_Fig6.RT10.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 851  OSPF_RFC2328_Fig6.RT10.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 250  OSPF_RFC2328_Fig6.Area2.N6.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 846  OSPF_RFC2328_Fig6.RT10.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 227  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 228  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 782  OSPF_RFC2328_Fig6.RT7.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 783  OSPF_RFC2328_Fig6.RT7.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 267  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 268  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 236  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 791  OSPF_RFC2328_Fig6.RT7.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 276  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 602  OSPF_RFC2328_Fig6.RT3.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 598  OSPF_RFC2328_Fig6.RT3.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 176  OSPF_RFC2328_Fig6.Area1.N4.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 593  OSPF_RFC2328_Fig6.RT3.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 193  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 194  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 210  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 211  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 202  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 219  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 790  OSPF_RFC2328_Fig6.RT7.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 786  OSPF_RFC2328_Fig6.RT7.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 781  OSPF_RFC2328_Fig6.RT7.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 847  OSPF_RFC2328_Fig6.RT10.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 848  OSPF_RFC2328_Fig6.RT10.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 856  OSPF_RFC2328_Fig6.RT10.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 817  OSPF_RFC2328_Fig6.RT10.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 765  OSPF_RFC2328_Fig6.RT7.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 234  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 274  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 247  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 243  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 278  OSPF_RFC2328_Fig6.Area2.N7.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 238  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 295  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 296  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 322  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 323  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 304  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 331  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 14  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 10  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 58  OSPF_RFC2328_Fig6.Area1.N1.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 5  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 75  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 76  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 92  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 93  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 84  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 101  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 614  OSPF_RFC2328_Fig6.RT3.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 610  OSPF_RFC2328_Fig6.RT3.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 605  OSPF_RFC2328_Fig6.RT3.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 729  OSPF_RFC2328_Fig6.RT6.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 730  OSPF_RFC2328_Fig6.RT6.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 738  OSPF_RFC2328_Fig6.RT6.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 428  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 424  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 459  OSPF_RFC2328_Fig6.Area3.N10.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 419  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 476  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 477  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 493  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 494  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 485  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 502  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 831  OSPF_RFC2328_Fig6.RT10.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 827  OSPF_RFC2328_Fig6.RT10.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 822  OSPF_RFC2328_Fig6.RT10.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 741  OSPF_RFC2328_Fig6.RT6.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 742  OSPF_RFC2328_Fig6.RT6.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 750  OSPF_RFC2328_Fig6.RT6.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 235  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 231  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 226  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 764  OSPF_RFC2328_Fig6.RT7.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 222  OSPF_RFC2328_Fig6.Area2.RT8.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 789  OSPF_RFC2328_Fig6.RT7.eth[1].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 854  OSPF_RFC2328_Fig6.RT10.eth[2].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 872  OSPF_RFC2328_Fig6.RT11.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 868  OSPF_RFC2328_Fig6.RT11.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 431  OSPF_RFC2328_Fig6.Area3.N9.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 863  OSPF_RFC2328_Fig6.RT11.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 379  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 380  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 396  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 397  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 448  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 449  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 388  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 405  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 457  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 404  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 400  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 395  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 864  OSPF_RFC2328_Fig6.RT11.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 865  OSPF_RFC2328_Fig6.RT11.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 873  OSPF_RFC2328_Fig6.RT11.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 858  OSPF_RFC2328_Fig6.RT11.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 391  OSPF_RFC2328_Fig6.Area3.RT12.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 386  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 455  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 375  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 371  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 504  OSPF_RFC2328_Fig6.Area3.N11.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 366  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 521  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 522  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 538  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 539  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 530  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 547  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 672  OSPF_RFC2328_Fig6.RT5.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 668  OSPF_RFC2328_Fig6.RT5.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 663  OSPF_RFC2328_Fig6.RT5.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 635  OSPF_RFC2328_Fig6.RT4.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 636  OSPF_RFC2328_Fig6.RT4.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 644  OSPF_RFC2328_Fig6.RT4.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 643  OSPF_RFC2328_Fig6.RT4.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 639  OSPF_RFC2328_Fig6.RT4.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 634  OSPF_RFC2328_Fig6.RT4.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 664  OSPF_RFC2328_Fig6.RT5.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 665  OSPF_RFC2328_Fig6.RT5.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 673  OSPF_RFC2328_Fig6.RT5.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 684  OSPF_RFC2328_Fig6.RT5.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 680  OSPF_RFC2328_Fig6.RT5.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 675  OSPF_RFC2328_Fig6.RT5.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 753  OSPF_RFC2328_Fig6.RT6.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 754  OSPF_RFC2328_Fig6.RT6.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 762  OSPF_RFC2328_Fig6.RT6.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 843  OSPF_RFC2328_Fig6.RT10.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 839  OSPF_RFC2328_Fig6.RT10.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 333  OSPF_RFC2328_Fig6.Area2.N8.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 834  OSPF_RFC2328_Fig6.RT10.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 876  OSPF_RFC2328_Fig6.RT11.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 877  OSPF_RFC2328_Fig6.RT11.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 350  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 351  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 885  OSPF_RFC2328_Fig6.RT11.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 359  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 884  OSPF_RFC2328_Fig6.RT11.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 880  OSPF_RFC2328_Fig6.RT11.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 875  OSPF_RFC2328_Fig6.RT11.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 835  OSPF_RFC2328_Fig6.RT10.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 836  OSPF_RFC2328_Fig6.RT10.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 844  OSPF_RFC2328_Fig6.RT10.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 859  OSPF_RFC2328_Fig6.RT11.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 357  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+5	420	0.089477298282	82
+10	418	0.089470098282	82
+14	417	0.089470098282	64
+58	419	0.089470198282	90
+75	421	0.089477498282	82
+76	421	0.089477498282	82
+84	423	0.089477498282	64
+92	422	0.089477498282	82
+93	422	0.089477498282	82
+101	424	0.089477498282	64
+176	159	0.08782780417	90
+193	161	0.08783510417	82
+194	161	0.08783510417	82
+202	163	0.08783510417	64
+210	162	0.08783510417	82
+211	162	0.08783510417	82
+219	164	0.08783510417	64
+222	509	0.092524047472	1
+222	512	0.092524047472	1
+226	466	0.092517887472	90
+226	524	0.092529807472	64
+226	546	0.092536527472	64
+226	569	0.092543727472	70
+226	583	0.092550927472	70
+226	621	0.092564607472	90
+226	646	0.092575007472	110
+226	679	0.092583807472	90
+226	712	0.092594527472	114
+226	776	0.092605247472	114
+226	807	0.092612447472	70
+226	856	0.092621887472	98
+226	902	0.092632607472	114
+226	948	0.092640767472	82
+226	1003	0.092651487472	114
+226	1040	0.092667887472	82
+226	1088	0.092677647472	82
+227	143	0.087570845195	82
+227	174	0.088973773439	86
+227	192	0.088979733439	64
+227	315	0.089042733439	102
+227	329	0.089044453439	114
+227	345	0.089052493439	102
+227	359	0.089062253439	102
+227	378	0.089072013439	102
+227	389	0.089072213439	114
+227	491	0.092524047472	64
+227	494	0.092524047472	64
+227	537	0.092536447472	70
+227	560	0.092543167472	70
+227	596	0.092556767472	150
+227	611	0.092557567472	70
+227	638	0.092571247472	70
+227	668	0.092578767472	74
+227	696	0.092589487472	114
+227	736	0.092596847472	150
+227	751	0.092599247472	102
+227	765	0.092604367472	74
+227	791	0.092609007472	102
+227	820	0.092615087472	114
+227	837	0.092618767472	102
+227	875	0.092623247472	82
+227	889	0.092629487472	114
+227	921	0.092633007472	102
+227	937	0.092640207472	114
+227	963	0.092641167472	82
+227	979	0.092648367472	82
+227	992	0.092650927472	102
+227	1019	0.092660687472	102
+227	1045	0.092668087472	82
+227	1067	0.092670447472	102
+227	1093	0.092677847472	82
+227	1113	0.092678607472	82
+228	143	0.087570845195	82
+228	174	0.088973773439	86
+228	192	0.088979733439	64
+228	315	0.089042733439	102
+228	329	0.089044453439	114
+228	345	0.089052493439	102
+228	359	0.089062253439	102
+228	378	0.089072013439	102
+228	389	0.089072213439	114
+228	491	0.092524047472	64
+228	494	0.092524047472	64
+228	537	0.092536447472	70
+228	560	0.092543167472	70
+228	596	0.092556767472	150
+228	611	0.092557567472	70
+228	638	0.092571247472	70
+228	668	0.092578767472	74
+228	696	0.092589487472	114
+228	736	0.092596847472	150
+228	751	0.092599247472	102
+228	765	0.092604367472	74
+228	791	0.092609007472	102
+228	820	0.092615087472	114
+228	837	0.092618767472	102
+228	875	0.092623247472	82
+228	889	0.092629487472	114
+228	921	0.092633007472	102
+228	937	0.092640207472	114
+228	963	0.092641167472	82
+228	979	0.092648367472	82
+228	992	0.092650927472	102
+228	1019	0.092660687472	102
+228	1045	0.092668087472	82
+228	1067	0.092670447472	102
+228	1093	0.092677847472	82
+228	1113	0.092678607472	82
+231	464	0.092510047472	90
+231	519	0.092524047472	64
+231	520	0.092524047472	64
+231	545	0.092536447472	70
+231	568	0.092543167472	70
+231	606	0.092556767472	90
+231	607	0.092556767472	110
+231	619	0.092557567472	90
+231	676	0.092578767472	114
+231	709	0.092589487472	114
+231	746	0.092596847472	70
+231	747	0.092596847472	98
+231	773	0.092604367472	114
+231	833	0.092615087472	82
+231	852	0.092618767472	114
+231	1034	0.092660687472	82
+231	1082	0.092670447472	82
+234	210	0.088985693439	64
+234	221	0.088992133439	70
+234	233	0.088998573439	70
+234	245	0.089006613439	90
+234	260	0.089017853439	130
+234	276	0.089024293439	70
+234	285	0.089025373439	74
+234	296	0.089033733439	98
+235	463	0.092510047472	72
+235	517	0.092524047472	28
+235	518	0.092524047472	28
+235	544	0.092536447472	52
+235	567	0.092543167472	52
+235	604	0.092556767472	72
+235	605	0.092556767472	92
+235	618	0.092557567472	72
+235	675	0.092578767472	96
+235	708	0.092589487472	96
+235	744	0.092596847472	52
+235	745	0.092596847472	80
+235	772	0.092604367472	96
+235	832	0.092615087472	64
+235	850	0.092618767472	96
+235	1032	0.092660687472	64
+235	1080	0.092670447472	64
+236	146	0.087570845195	64
+236	177	0.088973773439	68
+236	195	0.088979733439	28
+236	318	0.089042733439	84
+236	332	0.089044453439	96
+236	348	0.089052493439	84
+236	362	0.089062253439	84
+236	381	0.089072013439	84
+236	392	0.089072213439	96
+236	497	0.092524047472	28
+236	500	0.092524047472	28
+236	540	0.092536447472	52
+236	563	0.092543167472	52
+236	599	0.092556767472	132
+236	614	0.092557567472	52
+236	641	0.092571247472	52
+236	671	0.092578767472	56
+236	699	0.092589487472	96
+236	739	0.092596847472	132
+236	754	0.092599247472	84
+236	768	0.092604367472	56
+236	794	0.092609007472	84
+236	823	0.092615087472	96
+236	840	0.092618767472	84
+236	878	0.092623247472	64
+236	892	0.092629487472	96
+236	924	0.092633007472	84
+236	940	0.092640207472	96
+236	966	0.092641167472	64
+236	982	0.092648367472	64
+236	995	0.092650927472	84
+236	1022	0.092660687472	84
+236	1051	0.092668087472	64
+236	1070	0.092670447472	84
+236	1099	0.092677847472	64
+236	1118	0.092678607472	64
+238	407	0.089235622814	82
+243	405	0.089228422814	82
+247	404	0.089228422814	64
+250	141	0.087563545195	90
+250	172	0.088966153439	94
+250	189	0.088973873439	72
+250	207	0.088979833439	72
+250	218	0.088985793439	78
+250	230	0.088992233439	78
+250	242	0.088998673439	98
+250	257	0.089006713439	138
+250	272	0.089017953439	78
+250	274	0.089018713439	82
+250	283	0.089025153439	106
+250	311	0.089033833439	110
+250	313	0.089034593439	122
+250	327	0.089043593439	110
+250	357	0.089053353439	110
+250	373	0.089062353439	122
+250	375	0.089063113439	110
+250	465	0.092510147472	98
+250	486	0.092518187472	72
+250	487	0.092518187472	72
+250	521	0.092524147472	72
+250	533	0.092530107472	78
+250	535	0.092530867472	72
+250	555	0.092536827472	78
+250	558	0.092537587472	78
+250	580	0.092544027472	158
+250	582	0.092544787472	78
+250	593	0.092551227472	78
+250	608	0.092556867472	98
+250	634	0.092564907472	78
+250	636	0.092565667472	118
+250	645	0.092572107472	82
+250	666	0.092576067472	98
+250	678	0.092579627472	122
+250	692	0.092584107472	158
+250	694	0.092584867472	122
+250	711	0.092590347472	110
+250	734	0.092595587472	122
+250	749	0.092597707472	82
+250	763	0.092600107472	110
+250	775	0.092605227472	122
+250	789	0.092606307472	78
+250	806	0.092609867472	110
+250	818	0.092613507472	106
+250	835	0.092615947472	90
+250	855	0.092619627472	122
+250	873	0.092622947472	122
+250	887	0.092624107472	110
+250	901	0.092630347472	122
+250	933	0.092633667472	90
+250	935	0.092633867472	90
+250	962	0.092641067472	90
+250	975	0.092641827472	122
+250	977	0.092642027472	110
+250	1016	0.092651787472	110
+250	1036	0.092660787472	90
+250	1037	0.092660787472	90
+250	1039	0.092661547472	110
+250	1084	0.092670547472	90
+250	1085	0.092670547472	90
+250	1087	0.092671307472	90
+267	145	0.087570845195	82
+267	176	0.088973773439	86
+267	194	0.088979733439	64
+267	317	0.089042733439	102
+267	331	0.089044453439	114
+267	347	0.089052493439	102
+267	361	0.089062253439	102
+267	380	0.089072013439	102
+267	391	0.089072213439	114
+267	469	0.092518087472	90
+267	493	0.092524047472	64
+267	496	0.092524047472	64
+267	698	0.092589487472	114
+267	715	0.092594727472	114
+267	753	0.092599247472	102
+267	779	0.092605447472	114
+267	793	0.092609007472	102
+267	822	0.092615087472	114
+267	839	0.092618767472	102
+267	877	0.092623247472	82
+267	891	0.092629487472	114
+267	905	0.092632807472	114
+267	923	0.092633007472	102
+267	939	0.092640207472	114
+267	951	0.092640967472	82
+267	965	0.092641167472	82
+267	981	0.092648367472	82
+267	994	0.092650927472	102
+267	1006	0.092651687472	114
+267	1021	0.092660687472	102
+267	1044	0.092668087472	82
+267	1047	0.092668087472	82
+267	1069	0.092670447472	102
+267	1092	0.092677847472	82
+267	1095	0.092677847472	82
+267	1115	0.092678607472	82
+268	145	0.087570845195	82
+268	176	0.088973773439	86
+268	194	0.088979733439	64
+268	317	0.089042733439	102
+268	331	0.089044453439	114
+268	347	0.089052493439	102
+268	361	0.089062253439	102
+268	380	0.089072013439	102
+268	391	0.089072213439	114
+268	469	0.092518087472	90
+268	493	0.092524047472	64
+268	496	0.092524047472	64
+268	698	0.092589487472	114
+268	715	0.092594727472	114
+268	753	0.092599247472	102
+268	779	0.092605447472	114
+268	793	0.092609007472	102
+268	822	0.092615087472	114
+268	839	0.092618767472	102
+268	877	0.092623247472	82
+268	891	0.092629487472	114
+268	905	0.092632807472	114
+268	923	0.092633007472	102
+268	939	0.092640207472	114
+268	951	0.092640967472	82
+268	965	0.092641167472	82
+268	981	0.092648367472	82
+268	994	0.092650927472	102
+268	1006	0.092651687472	114
+268	1021	0.092660687472	102
+268	1044	0.092668087472	82
+268	1047	0.092668087472	82
+268	1069	0.092670447472	102
+268	1092	0.092677847472	82
+268	1095	0.092677847472	82
+268	1115	0.092678607472	82
+274	212	0.088985693439	64
+274	223	0.088992133439	70
+274	235	0.088998573439	70
+274	247	0.089006613439	90
+274	262	0.089017853439	130
+274	278	0.089024293439	70
+274	287	0.089025373439	74
+274	298	0.089033733439	98
+274	527	0.092530007472	64
+274	539	0.092536447472	70
+274	549	0.092536727472	64
+274	562	0.092543167472	70
+274	572	0.092543927472	70
+274	586	0.092551127472	70
+274	598	0.092556767472	150
+274	613	0.092557567472	70
+274	624	0.092564807472	90
+274	640	0.092571247472	70
+274	649	0.092575207472	110
+274	670	0.092578767472	74
+274	682	0.092584007472	90
+274	738	0.092596847472	150
+274	767	0.092604367472	74
+274	810	0.092612647472	70
+274	859	0.092622087472	98
+276	148	0.087570845195	64
+276	179	0.088973773439	68
+276	197	0.088979733439	28
+276	320	0.089042733439	84
+276	334	0.089044453439	96
+276	350	0.089052493439	84
+276	364	0.089062253439	84
+276	383	0.089072013439	84
+276	394	0.089072213439	96
+276	472	0.092518087472	72
+276	499	0.092524047472	28
+276	502	0.092524047472	28
+276	701	0.092589487472	96
+276	718	0.092594727472	96
+276	756	0.092599247472	84
+276	782	0.092605447472	96
+276	796	0.092609007472	84
+276	825	0.092615087472	96
+276	842	0.092618767472	84
+276	880	0.092623247472	64
+276	894	0.092629487472	96
+276	909	0.092632807472	96
+276	926	0.092633007472	84
+276	942	0.092640207472	96
+276	956	0.092640967472	64
+276	968	0.092641167472	64
+276	984	0.092648367472	64
+276	997	0.092650927472	84
+276	1010	0.092651687472	96
+276	1024	0.092660687472	84
+276	1050	0.092668087472	64
+276	1053	0.092668087472	64
+276	1072	0.092670447472	84
+276	1098	0.092677847472	64
+276	1101	0.092677847472	64
+276	1120	0.092678607472	64
+278	406	0.089228522814	90
+295	408	0.089235822814	82
+296	408	0.089235822814	82
+304	410	0.089235822814	64
+322	409	0.089235822814	82
+323	409	0.089235822814	82
+331	411	0.089235822814	64
+333	1715	0.09907952101	90
+333	1729	0.10130191749	94
+333	1742	0.10130963749	72
+333	1756	0.10131559749	72
+333	1766	0.10132155749	78
+333	1777	0.10132799749	78
+333	1788	0.10133443749	178
+333	1802	0.10134887749	118
+350	1718	0.09908682101	82
+350	1732	0.10130953749	86
+350	1746	0.10131549749	64
+351	1718	0.09908682101	82
+351	1732	0.10130953749	86
+351	1746	0.10131549749	64
+357	1760	0.10132145749	64
+357	1770	0.10132789749	70
+357	1781	0.10133433749	70
+357	1792	0.10134877749	170
+357	1806	0.10135841749	110
+359	1720	0.09908682101	64
+359	1734	0.10130953749	68
+359	1748	0.10131549749	28
+366	1367	0.096850315973	82
+371	1365	0.096843115973	82
+375	1364	0.096843115973	64
+379	1133	0.094597163719	82
+379	1151	0.096354700613	86
+379	1169	0.096360660613	64
+379	1289	0.096420900613	102
+379	1303	0.096422060613	126
+379	1319	0.096430020613	94
+379	1337	0.096439780613	102
+379	1350	0.096440940613	126
+380	1133	0.094597163719	82
+380	1151	0.096354700613	86
+380	1169	0.096360660613	64
+380	1289	0.096420900613	102
+380	1303	0.096422060613	126
+380	1319	0.096430020613	94
+380	1337	0.096439780613	102
+380	1350	0.096440940613	126
+386	1187	0.096366620613	64
+386	1198	0.096373060613	70
+386	1210	0.096379500613	70
+386	1222	0.096389140613	110
+386	1237	0.096397180613	90
+386	1253	0.096403620613	70
+386	1262	0.096405660613	86
+386	1276	0.096411140613	74
+388	1136	0.094597163719	64
+388	1154	0.096354700613	68
+388	1172	0.096360660613	28
+388	1292	0.096420900613	84
+388	1306	0.096422060613	108
+388	1322	0.096430020613	76
+388	1340	0.096439780613	84
+388	1353	0.096440940613	108
+391	1179	0.096360660613	1
+395	1150	0.096354500613	86
+395	1186	0.096366420613	64
+395	1209	0.096379300613	70
+395	1236	0.096396980613	90
+395	1261	0.096405460613	86
+395	1302	0.096421860613	126
+395	1349	0.096440740613	126
+396	1134	0.094597163719	82
+396	1170	0.096360660613	64
+396	1199	0.096373060613	70
+396	1223	0.096389140613	110
+396	1254	0.096403620613	70
+396	1277	0.096411140613	74
+396	1290	0.096420900613	102
+396	1320	0.096430020613	94
+396	1338	0.096439780613	102
+397	1134	0.094597163719	82
+397	1170	0.096360660613	64
+397	1199	0.096373060613	70
+397	1223	0.096389140613	110
+397	1254	0.096403620613	70
+397	1277	0.096411140613	74
+397	1290	0.096420900613	102
+397	1320	0.096430020613	94
+397	1338	0.096439780613	102
+400	1148	0.096346980613	86
+400	1183	0.096360660613	64
+400	1206	0.096373060613	70
+400	1232	0.096389140613	90
+400	1233	0.096389140613	86
+400	1284	0.096411140613	126
+400	1332	0.096430020613	126
+404	1147	0.096346980613	68
+404	1182	0.096360660613	28
+404	1205	0.096373060613	52
+404	1230	0.096389140613	72
+404	1231	0.096389140613	68
+404	1283	0.096411140613	108
+404	1331	0.096430020613	108
+405	1137	0.094597163719	64
+405	1173	0.096360660613	28
+405	1201	0.096373060613	52
+405	1225	0.096389140613	92
+405	1256	0.096403620613	52
+405	1279	0.096411140613	56
+405	1293	0.096420900613	84
+405	1323	0.096430020613	76
+405	1341	0.096439780613	84
+419	443	0.090269227451	82
+424	441	0.090262027451	82
+428	440	0.090262027451	64
+431	1131	0.094589863719	90
+431	1149	0.096347080613	94
+431	1166	0.096354800613	72
+431	1184	0.096360760613	72
+431	1195	0.096366720613	78
+431	1207	0.096373160613	78
+431	1219	0.096379600613	118
+431	1234	0.096389240613	98
+431	1249	0.096397280613	78
+431	1251	0.096398040613	94
+431	1260	0.096404480613	82
+431	1285	0.096411240613	134
+431	1287	0.096412000613	110
+431	1301	0.096421760613	102
+431	1333	0.096430120613	134
+431	1335	0.096430880613	110
+448	1135	0.094597163719	82
+448	1153	0.096354700613	86
+448	1171	0.096360660613	64
+448	1291	0.096420900613	102
+448	1305	0.096422060613	126
+448	1321	0.096430020613	94
+448	1339	0.096439780613	102
+448	1352	0.096440940613	126
+449	1135	0.094597163719	82
+449	1153	0.096354700613	86
+449	1171	0.096360660613	64
+449	1291	0.096420900613	102
+449	1305	0.096422060613	126
+449	1321	0.096430020613	94
+449	1339	0.096439780613	102
+449	1352	0.096440940613	126
+455	1189	0.096366620613	64
+455	1200	0.096373060613	70
+455	1212	0.096379500613	70
+455	1224	0.096389140613	110
+455	1239	0.096397180613	90
+455	1255	0.096403620613	70
+455	1264	0.096405660613	86
+455	1278	0.096411140613	74
+457	1138	0.094597163719	64
+457	1156	0.096354700613	68
+457	1174	0.096360660613	28
+457	1294	0.096420900613	84
+457	1308	0.096422060613	108
+457	1324	0.096430020613	76
+457	1342	0.096439780613	84
+457	1355	0.096440940613	108
+459	442	0.090262127451	90
+476	444	0.090269427451	82
+477	444	0.090269427451	82
+485	446	0.090269427451	64
+493	445	0.090269427451	82
+494	445	0.090269427451	82
+502	447	0.090269427451	64
+504	1366	0.096843215973	90
+521	1368	0.096850515973	82
+522	1368	0.096850515973	82
+530	1370	0.096850515973	64
+538	1369	0.096850515973	82
+539	1369	0.096850515973	82
+547	1371	0.096850515973	64
+593	160	0.08783490417	82
+598	158	0.08782770417	82
+602	157	0.08782770417	64
+605	432	0.089880600851	82
+610	431	0.089873400851	82
+614	430	0.089873400851	64
+634	1389	0.098003841822	86
+634	1407	0.098016521822	70
+634	1425	0.098032401822	110
+634	1449	0.098051481822	70
+634	1467	0.098061881822	110
+634	1490	0.098070681822	90
+634	1502	0.098079801822	94
+634	1527	0.098108961822	114
+635	1380	0.097457992058	82
+635	1399	0.098010281822	70
+635	1417	0.098022961822	70
+635	1438	0.098045241822	150
+635	1456	0.098053721822	86
+635	1486	0.098069921822	90
+635	1498	0.098079681822	102
+635	1513	0.098089441822	102
+635	1519	0.098099201822	102
+635	1534	0.098110881822	126
+635	1655	0.098712358686	90
+635	1672	0.098724998686	138
+636	1380	0.097457992058	82
+636	1399	0.098010281822	70
+636	1417	0.098022961822	70
+636	1438	0.098045241822	150
+636	1456	0.098053721822	86
+636	1486	0.098069921822	90
+636	1498	0.098079681822	102
+636	1513	0.098089441822	102
+636	1519	0.098099201822	102
+636	1534	0.098110881822	126
+636	1655	0.098712358686	90
+636	1672	0.098724998686	138
+639	1388	0.097996321822	86
+639	1405	0.098010281822	70
+639	1423	0.098022961822	110
+639	1446	0.098045241822	70
+639	1447	0.098045241822	110
+639	1464	0.098053721822	90
+639	1465	0.098053721822	94
+639	1525	0.098099201822	114
+643	1387	0.097996321822	68
+643	1404	0.098010281822	52
+643	1422	0.098022961822	92
+643	1444	0.098045241822	52
+643	1445	0.098045241822	92
+643	1462	0.098053721822	72
+643	1463	0.098053721822	76
+643	1524	0.098099201822	96
+644	1381	0.097457992058	64
+644	1400	0.098010281822	52
+644	1418	0.098022961822	52
+644	1439	0.098045241822	132
+644	1457	0.098053721822	68
+644	1487	0.098069921822	72
+644	1499	0.098079681822	84
+644	1514	0.098089441822	84
+644	1520	0.098099201822	84
+644	1535	0.098110881822	108
+644	1656	0.098712358686	72
+644	1673	0.098724998686	120
+663	1379	0.097457892058	82
+663	1398	0.098010181822	70
+663	1416	0.098022861822	70
+663	1437	0.098045141822	150
+663	1455	0.098053621822	86
+663	1485	0.098069821822	90
+663	1497	0.098079581822	102
+663	1512	0.098089341822	102
+663	1518	0.098099101822	102
+663	1533	0.098110781822	126
+663	1654	0.098712258686	90
+663	1671	0.098724898686	138
+664	1390	0.098003941822	86
+664	1408	0.098016621822	70
+664	1426	0.098032501822	110
+664	1450	0.098051581822	70
+664	1468	0.098061981822	110
+664	1491	0.098070781822	90
+664	1503	0.098079901822	94
+664	1528	0.098109061822	114
+665	1390	0.098003941822	86
+665	1408	0.098016621822	70
+665	1426	0.098032501822	110
+665	1450	0.098051581822	70
+665	1468	0.098061981822	110
+665	1491	0.098070781822	90
+665	1503	0.098079901822	94
+665	1528	0.098109061822	114
+668	1378	0.097450692058	82
+668	1396	0.098003941822	70
+668	1414	0.098016621822	70
+668	1434	0.098032501822	150
+668	1435	0.098032501822	86
+668	1480	0.098061981822	90
+668	1481	0.098061981822	102
+668	1482	0.098061981822	102
+668	1483	0.098061981822	102
+668	1509	0.098079901822	126
+668	1644	0.098704418686	90
+668	1645	0.098704418686	138
+672	1377	0.097450692058	64
+672	1395	0.098003941822	52
+672	1413	0.098016621822	52
+672	1432	0.098032501822	132
+672	1433	0.098032501822	68
+672	1476	0.098061981822	72
+672	1477	0.098061981822	84
+672	1478	0.098061981822	84
+672	1479	0.098061981822	84
+672	1508	0.098079901822	108
+672	1641	0.098704418686	72
+672	1642	0.098704418686	120
+673	1391	0.098003941822	68
+673	1409	0.098016621822	52
+673	1427	0.098032501822	92
+673	1451	0.098051581822	52
+673	1469	0.098061981822	92
+673	1493	0.098070781822	72
+673	1504	0.098079901822	76
+673	1529	0.098109061822	96
+675	1543	0.098640298686	86
+675	1561	0.098652978686	70
+675	1582	0.098676858686	190
+675	1600	0.098684378686	74
+675	1648	0.098706338686	126
+675	1660	0.098715138686	90
+675	1666	0.098724258686	94
+675	1678	0.098734018686	102
+675	1684	0.098743778686	102
+675	1690	0.098753538686	102
+675	1704	0.098766178686	138
+676	132	0.072656061897	82
+676	1553	0.098646738686	70
+676	1571	0.098661018686	90
+676	1595	0.098683298686	70
+676	1610	0.098695618686	134
+676	1634	0.098704418686	90
+676	1700	0.098765418686	138
+677	132	0.072656061897	82
+677	1553	0.098646738686	70
+677	1571	0.098661018686	90
+677	1595	0.098683298686	70
+677	1610	0.098695618686	134
+677	1634	0.098704418686	90
+677	1700	0.098765418686	138
+680	1542	0.098632778686	86
+680	1559	0.098646738686	70
+680	1579	0.098661018686	190
+680	1580	0.098661018686	74
+680	1626	0.098695618686	126
+680	1627	0.098695618686	90
+680	1628	0.098695618686	94
+680	1629	0.098695618686	102
+680	1630	0.098695618686	102
+680	1631	0.098695618686	102
+680	1646	0.098704418686	138
+684	1541	0.098632778686	68
+684	1558	0.098646738686	52
+684	1577	0.098661018686	172
+684	1578	0.098661018686	56
+684	1620	0.098695618686	108
+684	1621	0.098695618686	72
+684	1622	0.098695618686	76
+684	1623	0.098695618686	84
+684	1624	0.098695618686	84
+684	1625	0.098695618686	84
+684	1643	0.098704418686	120
+685	133	0.072656061897	64
+685	1554	0.098646738686	52
+685	1572	0.098661018686	72
+685	1596	0.098683298686	52
+685	1611	0.098695618686	116
+685	1635	0.098704418686	72
+685	1701	0.098765418686	120
+729	433	0.089880700851	82
+730	433	0.089880700851	82
+738	434	0.089880700851	64
+741	456	0.092481293728	82
+742	456	0.092481293728	82
+750	457	0.092481293728	64
+752	131	0.072655961897	82
+752	1552	0.098646638686	70
+752	1570	0.098660918686	90
+752	1594	0.098683198686	70
+752	1609	0.098695518686	134
+752	1633	0.098704318686	90
+752	1699	0.098765318686	138
+753	1544	0.098640398686	86
+753	1562	0.098653078686	70
+753	1583	0.098676958686	190
+753	1601	0.098684478686	74
+753	1649	0.098706438686	126
+753	1661	0.098715238686	90
+753	1667	0.098724358686	94
+753	1679	0.098734118686	102
+753	1685	0.098743878686	102
+753	1691	0.098753638686	102
+753	1705	0.098766278686	138
+754	1544	0.098640398686	86
+754	1562	0.098653078686	70
+754	1583	0.098676958686	190
+754	1601	0.098684478686	74
+754	1649	0.098706438686	126
+754	1661	0.098715238686	90
+754	1667	0.098724358686	94
+754	1679	0.098734118686	102
+754	1685	0.098743878686	102
+754	1691	0.098753638686	102
+754	1705	0.098766278686	138
+757	130	0.072648761897	82
+757	1550	0.098640398686	70
+757	1568	0.098653078686	90
+757	1591	0.098676958686	70
+757	1592	0.098676958686	134
+757	1607	0.098684478686	90
+757	1697	0.098753638686	138
+761	129	0.072648761897	64
+761	1549	0.098640398686	52
+761	1567	0.098653078686	72
+761	1589	0.098676958686	52
+761	1590	0.098676958686	116
+761	1606	0.098684478686	72
+761	1696	0.098753638686	120
+762	1545	0.098640398686	68
+762	1563	0.098653078686	52
+762	1584	0.098676958686	172
+762	1602	0.098684478686	56
+762	1650	0.098706438686	108
+762	1662	0.098715238686	72
+762	1668	0.098724358686	76
+762	1680	0.098734118686	84
+762	1686	0.098743878686	84
+762	1692	0.098753638686	84
+762	1707	0.098766278686	120
+764	479	0.092518087472	1
+765	202	0.088979733439	1
+781	173	0.088973573439	86
+781	209	0.088985493439	64
+781	232	0.088998373439	70
+781	259	0.089017653439	130
+781	284	0.089025173439	74
+781	314	0.089042533439	102
+781	344	0.089052293439	102
+781	358	0.089062053439	102
+781	376	0.089071813439	102
+781	490	0.092523847472	64
+781	559	0.092542967472	70
+781	609	0.092557367472	70
+781	735	0.092596647472	150
+781	764	0.092604167472	74
+781	819	0.092614887472	114
+781	874	0.092623047472	82
+781	906	0.092632807472	102
+781	952	0.092640967472	82
+781	991	0.092650727472	102
+781	1018	0.092660487472	102
+781	1066	0.092670247472	102
+781	1112	0.092678407472	82
+782	144	0.087570845195	82
+782	193	0.088979733439	64
+782	222	0.088992133439	70
+782	246	0.089006613439	90
+782	277	0.089024293439	70
+782	297	0.089033733439	98
+782	330	0.089044453439	114
+782	390	0.089072213439	114
+782	468	0.092518087472	90
+782	492	0.092524047472	64
+782	548	0.092536727472	64
+782	585	0.092551127472	70
+782	681	0.092584007472	90
+782	697	0.092589487472	114
+782	714	0.092594727472	114
+782	752	0.092599247472	102
+782	778	0.092605447472	114
+782	792	0.092609007472	102
+782	809	0.092612647472	70
+782	838	0.092618767472	102
+782	858	0.092622087472	98
+782	890	0.092629487472	114
+782	904	0.092632807472	114
+782	938	0.092640207472	114
+782	950	0.092640967472	82
+782	980	0.092648367472	82
+782	1005	0.092651687472	114
+782	1043	0.092668087472	82
+782	1046	0.092668087472	82
+782	1091	0.092677847472	82
+782	1094	0.092677847472	82
+783	144	0.087570845195	82
+783	193	0.088979733439	64
+783	222	0.088992133439	70
+783	246	0.089006613439	90
+783	277	0.089024293439	70
+783	297	0.089033733439	98
+783	330	0.089044453439	114
+783	390	0.089072213439	114
+783	468	0.092518087472	90
+783	492	0.092524047472	64
+783	548	0.092536727472	64
+783	585	0.092551127472	70
+783	681	0.092584007472	90
+783	697	0.092589487472	114
+783	714	0.092594727472	114
+783	752	0.092599247472	102
+783	778	0.092605447472	114
+783	792	0.092609007472	102
+783	809	0.092612647472	70
+783	838	0.092618767472	102
+783	858	0.092622087472	98
+783	890	0.092629487472	114
+783	904	0.092632807472	114
+783	938	0.092640207472	114
+783	950	0.092640967472	82
+783	980	0.092648367472	82
+783	1005	0.092651687472	114
+783	1043	0.092668087472	82
+783	1046	0.092668087472	82
+783	1091	0.092677847472	82
+783	1094	0.092677847472	82
+786	171	0.088966053439	86
+786	206	0.088979733439	64
+786	229	0.088992133439	70
+786	255	0.089006613439	130
+786	256	0.089006613439	74
+786	308	0.089033733439	102
+786	309	0.089033733439	102
+786	310	0.089033733439	102
+786	342	0.089044453439	102
+786	485	0.092518087472	64
+786	554	0.092536727472	70
+786	592	0.092551127472	70
+786	690	0.092584007472	150
+786	691	0.092584007472	74
+786	732	0.092594727472	114
+786	804	0.092609007472	82
+786	816	0.092612647472	102
+786	853	0.092618767472	82
+786	869	0.092622087472	102
+786	870	0.092622087472	102
+786	871	0.092622087472	102
+786	920	0.092632807472	82
+789	526	0.092530007472	64
+789	538	0.092536447472	70
+789	571	0.092543927472	70
+789	597	0.092556767472	150
+789	623	0.092564807472	90
+789	639	0.092571247472	70
+789	648	0.092575207472	110
+789	669	0.092578767472	74
+790	170	0.088966053439	68
+790	205	0.088979733439	28
+790	228	0.088992133439	52
+790	253	0.089006613439	112
+790	254	0.089006613439	56
+790	305	0.089033733439	84
+790	306	0.089033733439	84
+790	307	0.089033733439	84
+790	341	0.089044453439	84
+790	483	0.092518087472	28
+790	553	0.092536727472	52
+790	591	0.092551127472	52
+790	688	0.092584007472	132
+790	689	0.092584007472	56
+790	729	0.092594727472	96
+790	803	0.092609007472	64
+790	815	0.092612647472	84
+790	851	0.092618767472	64
+790	866	0.092622087472	84
+790	867	0.092622087472	84
+790	868	0.092622087472	84
+790	918	0.092632807472	64
+791	147	0.087570845195	64
+791	196	0.088979733439	28
+791	224	0.088992133439	52
+791	248	0.089006613439	72
+791	279	0.089024293439	52
+791	299	0.089033733439	80
+791	333	0.089044453439	96
+791	393	0.089072213439	96
+791	471	0.092518087472	72
+791	498	0.092524047472	28
+791	550	0.092536727472	28
+791	587	0.092551127472	52
+791	683	0.092584007472	72
+791	700	0.092589487472	96
+791	717	0.092594727472	96
+791	755	0.092599247472	84
+791	781	0.092605447472	96
+791	795	0.092609007472	84
+791	811	0.092612647472	52
+791	841	0.092618767472	84
+791	860	0.092622087472	80
+791	893	0.092629487472	96
+791	908	0.092632807472	96
+791	941	0.092640207472	96
+791	955	0.092640967472	64
+791	983	0.092648367472	64
+791	1009	0.092651687472	96
+791	1049	0.092668087472	64
+791	1052	0.092668087472	64
+791	1097	0.092677847472	64
+791	1100	0.092677847472	64
+817	185	0.088973773439	1
+817	478	0.092518087472	1
+817	1738	0.10130953749	1
+822	455	0.092481193728	82
+827	454	0.092473993728	82
+831	453	0.092473993728	64
+834	1716	0.09908662101	82
+834	1744	0.10131529749	64
+834	1768	0.10132769749	70
+834	1790	0.10134857749	170
+835	1731	0.10130953749	86
+835	1759	0.10132145749	64
+835	1780	0.10133433749	70
+835	1805	0.10135841749	110
+836	1731	0.10130953749	86
+836	1759	0.10132145749	64
+836	1780	0.10133433749	70
+836	1805	0.10135841749	110
+839	1714	0.09907942101	82
+839	1741	0.10130953749	64
+839	1765	0.10132145749	70
+839	1787	0.10133433749	170
+843	1713	0.09907942101	64
+843	1740	0.10130953749	28
+843	1764	0.10132145749	52
+843	1786	0.10133433749	152
+844	1733	0.10130953749	68
+844	1761	0.10132145749	28
+844	1782	0.10133433749	52
+844	1807	0.10135841749	92
+846	142	0.087570645195	82
+846	191	0.088979533439	64
+846	220	0.088991933439	70
+846	244	0.089006413439	90
+846	275	0.089024093439	70
+846	295	0.089033533439	98
+846	328	0.089044253439	114
+846	377	0.089072013439	114
+846	489	0.092523847472	64
+846	536	0.092536247472	70
+846	595	0.092556567472	150
+846	637	0.092571047472	70
+846	667	0.092578567472	74
+846	695	0.092589287472	114
+846	750	0.092599047472	102
+846	790	0.092608807472	102
+846	836	0.092618567472	102
+846	888	0.092629287472	114
+846	936	0.092640007472	114
+846	978	0.092648167472	82
+846	1041	0.092667887472	82
+846	1089	0.092677647472	82
+847	175	0.088973773439	86
+847	211	0.088985693439	64
+847	234	0.088998573439	70
+847	261	0.089017853439	130
+847	286	0.089025373439	74
+847	316	0.089042733439	102
+847	346	0.089052493439	102
+847	360	0.089062253439	102
+847	379	0.089072013439	102
+847	467	0.092518087472	90
+847	495	0.092524047472	64
+847	525	0.092530007472	64
+847	570	0.092543927472	70
+847	622	0.092564807472	90
+847	647	0.092575207472	110
+847	713	0.092594727472	114
+847	777	0.092605447472	114
+847	821	0.092615087472	114
+847	876	0.092623247472	82
+847	903	0.092632807472	114
+847	922	0.092633007472	102
+847	949	0.092640967472	82
+847	964	0.092641167472	82
+847	993	0.092650927472	102
+847	1004	0.092651687472	114
+847	1020	0.092660687472	102
+847	1042	0.092668087472	82
+847	1068	0.092670447472	102
+847	1090	0.092677847472	82
+847	1114	0.092678607472	82
+848	175	0.088973773439	86
+848	211	0.088985693439	64
+848	234	0.088998573439	70
+848	261	0.089017853439	130
+848	286	0.089025373439	74
+848	316	0.089042733439	102
+848	346	0.089052493439	102
+848	360	0.089062253439	102
+848	379	0.089072013439	102
+848	467	0.092518087472	90
+848	495	0.092524047472	64
+848	525	0.092530007472	64
+848	570	0.092543927472	70
+848	622	0.092564807472	90
+848	647	0.092575207472	110
+848	713	0.092594727472	114
+848	777	0.092605447472	114
+848	821	0.092615087472	114
+848	876	0.092623247472	82
+848	903	0.092632807472	114
+848	922	0.092633007472	102
+848	949	0.092640967472	82
+848	964	0.092641167472	82
+848	993	0.092650927472	102
+848	1004	0.092651687472	114
+848	1020	0.092660687472	102
+848	1042	0.092668087472	82
+848	1068	0.092670447472	102
+848	1090	0.092677847472	82
+848	1114	0.092678607472	82
+851	140	0.087563445195	82
+851	188	0.088973773439	64
+851	217	0.088985693439	70
+851	241	0.088998573439	90
+851	270	0.089017853439	70
+851	271	0.089017853439	98
+851	293	0.089025373439	114
+851	372	0.089062253439	114
+851	484	0.092518087472	64
+851	532	0.092530007472	70
+851	579	0.092543927472	150
+851	632	0.092564807472	70
+851	633	0.092564807472	74
+851	661	0.092575207472	114
+851	662	0.092575207472	102
+851	663	0.092575207472	102
+851	664	0.092575207472	102
+851	730	0.092594727472	114
+851	731	0.092594727472	114
+851	919	0.092632807472	82
+851	1035	0.092660687472	82
+851	1083	0.092670447472	82
+854	547	0.092536727472	64
+854	561	0.092543167472	70
+854	584	0.092551127472	70
+854	612	0.092557567472	70
+854	680	0.092584007472	90
+854	737	0.092596847472	150
+854	766	0.092604367472	74
+854	808	0.092612647472	70
+854	857	0.092622087472	98
+855	139	0.087563445195	64
+855	187	0.088973773439	28
+855	216	0.088985693439	52
+855	240	0.088998573439	72
+855	268	0.089017853439	52
+855	269	0.089017853439	80
+855	292	0.089025373439	96
+855	371	0.089062253439	96
+855	482	0.092518087472	28
+855	531	0.092530007472	52
+855	578	0.092543927472	132
+855	630	0.092564807472	52
+855	631	0.092564807472	56
+855	657	0.092575207472	96
+855	658	0.092575207472	84
+855	659	0.092575207472	84
+855	660	0.092575207472	84
+855	727	0.092594727472	96
+855	728	0.092594727472	96
+855	917	0.092632807472	64
+855	1033	0.092660687472	64
+855	1081	0.092670447472	64
+856	178	0.088973773439	68
+856	213	0.088985693439	28
+856	236	0.088998573439	52
+856	263	0.089017853439	112
+856	288	0.089025373439	56
+856	319	0.089042733439	84
+856	349	0.089052493439	84
+856	363	0.089062253439	84
+856	382	0.089072013439	84
+856	470	0.092518087472	72
+856	501	0.092524047472	28
+856	528	0.092530007472	28
+856	574	0.092543927472	52
+856	625	0.092564807472	72
+856	650	0.092575207472	92
+856	716	0.092594727472	96
+856	780	0.092605447472	96
+856	824	0.092615087472	96
+856	879	0.092623247472	64
+856	907	0.092632807472	96
+856	925	0.092633007472	84
+856	954	0.092640967472	64
+856	967	0.092641167472	64
+856	996	0.092650927472	84
+856	1008	0.092651687472	96
+856	1023	0.092660687472	84
+856	1048	0.092668087472	64
+856	1071	0.092670447472	84
+856	1096	0.092677847472	64
+856	1119	0.092678607472	64
+858	1162	0.096354700613	1
+859	1751	0.10131549749	1
+863	1132	0.094596963719	82
+863	1168	0.096360460613	64
+863	1197	0.096372860613	70
+863	1221	0.096388940613	110
+863	1252	0.096403420613	70
+863	1275	0.096410940613	74
+863	1288	0.096420700613	102
+863	1318	0.096429820613	94
+863	1336	0.096439580613	102
+864	1152	0.096354700613	86
+864	1188	0.096366620613	64
+864	1211	0.096379500613	70
+864	1238	0.096397180613	90
+864	1263	0.096405660613	86
+864	1304	0.096422060613	126
+864	1351	0.096440940613	126
+865	1152	0.096354700613	86
+865	1188	0.096366620613	64
+865	1211	0.096379500613	70
+865	1238	0.096397180613	90
+865	1263	0.096405660613	86
+865	1304	0.096422060613	126
+865	1351	0.096440940613	126
+868	1130	0.094589763719	82
+868	1165	0.096354700613	64
+868	1194	0.096366620613	70
+868	1218	0.096379500613	110
+868	1247	0.096397180613	70
+868	1248	0.096397180613	74
+868	1272	0.096405660613	102
+868	1273	0.096405660613	94
+868	1316	0.096422060613	102
+872	1129	0.094589763719	64
+872	1164	0.096354700613	28
+872	1193	0.096366620613	52
+872	1217	0.096379500613	92
+872	1245	0.096397180613	52
+872	1246	0.096397180613	56
+872	1270	0.096405660613	84
+872	1271	0.096405660613	76
+872	1315	0.096422060613	84
+873	1155	0.096354700613	68
+873	1190	0.096366620613	28
+873	1213	0.096379500613	52
+873	1240	0.096397180613	72
+873	1265	0.096405660613	68
+873	1307	0.096422060613	108
+873	1354	0.096440940613	108
+875	1730	0.10130933749	86
+875	1758	0.10132125749	64
+875	1779	0.10133413749	70
+875	1804	0.10135821749	110
+876	1717	0.09908682101	82
+876	1745	0.10131549749	64
+876	1769	0.10132789749	70
+876	1791	0.10134877749	170
+877	1717	0.09908682101	82
+877	1745	0.10131549749	64
+877	1769	0.10132789749	70
+877	1791	0.10134877749	170
+880	1728	0.10130181749	86
+880	1755	0.10131549749	64
+880	1776	0.10132789749	70
+880	1800	0.10134877749	110
+880	1801	0.10134877749	122
+884	1727	0.10130181749	68
+884	1754	0.10131549749	28
+884	1775	0.10132789749	52
+884	1798	0.10134877749	92
+884	1799	0.10134877749	104
+885	1719	0.09908682101	64
+885	1747	0.10131549749	28
+885	1771	0.10132789749	52
+885	1793	0.10134877749	152

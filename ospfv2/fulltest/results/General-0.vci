@@ -1,0 +1,819 @@
+file 67104 1733977149                                           
+version 2
+run General-0-20241211-20:16:50-9188
+attr configname General
+attr datetime 20241211-20:16:50
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network OSPF_RFC2328_Fig6
+attr processid 9188
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Area1.N1.host[0].udpApp[1].destAddresses "\"Area1.N4.host[0]\""
+param **.Area1.N2.host[0].udpApp[1].destAddresses "\"Area2.N6.host[0]\""
+param **.Area1.N3.host[0].udpApp[1].destAddresses "\"Area3.N10.host[0]\""
+param **.Area1.N4.host[0].udpApp[1].destAddresses "\"N12.host[0]\""
+param **.Area2.N6.host[0].udpApp[1].destAddresses "\"Area1.N1.host[0]\""
+param **.Area2.N7.host[0].udpApp[1].destAddresses "\"Area2.N8.host[0]\""
+param **.Area2.N7.host[1].udpApp[1].destAddresses "\"N13.host[0]\""
+param **.Area2.N8.host[0].udpApp[1].destAddresses "\"Area3.N9.host[0]\""
+param **.Area3.H1.udpApp[1].destAddresses "\"Area3.N11.host[0]\""
+param **.Area3.N10.host[0].udpApp[1].destAddresses "\"N15.host[0]\""
+param **.Area3.N11.host[0].udpApp[1].destAddresses "\"Area1.N2.host[0]\""
+param **.Area3.N9.host[0].udpApp[1].destAddresses "\"Area2.N7.host[0]\""
+param **.H1.numUdpApps 2
+param **.H1.udpApp[1].destAddresses "\"Area1.N3.host[0]\""
+param **.N12.host[0].udpApp[1].destAddresses "\"Area3.H1\""
+param **.N13.host[0].udpApp[1].destAddresses "\"Area1.N3.host[0]\""
+param **.N14.host[0].udpApp[1].destAddresses "\"Area2.N7.host[1]\""
+param **.N15.host[0].udpApp[1].destAddresses "\"N14.host[0]\""
+param **.N7.host[1].numUdpApps 2
+param **.arp.cacheTimeout 1s
+param **.host[0].numUdpApps 2
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.udpApp[0].localPort 1234
+param **.udpApp[0].typename "\"UDPEchoApp\""
+param **.udpApp[1..].destPort 1234
+param **.udpApp[1..].messageLength "32 bytes"
+param **.udpApp[1..].sendInterval 0.1s
+param **.udpApp[1..].startTime 10s
+param **.udpApp[1..].typename "\"UDPBasicApp\""
+param *.usenew true
+
+vector 761  OSPF_RFC2328_Fig6.RT6.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 757  OSPF_RFC2328_Fig6.RT6.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 752  OSPF_RFC2328_Fig6.RT6.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 676  OSPF_RFC2328_Fig6.RT5.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 677  OSPF_RFC2328_Fig6.RT5.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 685  OSPF_RFC2328_Fig6.RT5.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 855  OSPF_RFC2328_Fig6.RT10.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 851  OSPF_RFC2328_Fig6.RT10.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 250  OSPF_RFC2328_Fig6.Area2.N6.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 846  OSPF_RFC2328_Fig6.RT10.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 227  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 228  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 782  OSPF_RFC2328_Fig6.RT7.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 783  OSPF_RFC2328_Fig6.RT7.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 267  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 268  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 236  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 791  OSPF_RFC2328_Fig6.RT7.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 276  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 602  OSPF_RFC2328_Fig6.RT3.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 598  OSPF_RFC2328_Fig6.RT3.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 176  OSPF_RFC2328_Fig6.Area1.N4.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 593  OSPF_RFC2328_Fig6.RT3.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 193  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 194  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 210  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 211  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 202  OSPF_RFC2328_Fig6.Area1.N4.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 219  OSPF_RFC2328_Fig6.Area1.N4.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 790  OSPF_RFC2328_Fig6.RT7.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 786  OSPF_RFC2328_Fig6.RT7.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 781  OSPF_RFC2328_Fig6.RT7.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 847  OSPF_RFC2328_Fig6.RT10.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 848  OSPF_RFC2328_Fig6.RT10.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 856  OSPF_RFC2328_Fig6.RT10.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 817  OSPF_RFC2328_Fig6.RT10.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 765  OSPF_RFC2328_Fig6.RT7.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 234  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 274  OSPF_RFC2328_Fig6.Area2.N6.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 247  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 243  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 278  OSPF_RFC2328_Fig6.Area2.N7.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 238  OSPF_RFC2328_Fig6.Area2.RT8.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 295  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 296  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 322  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 323  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 304  OSPF_RFC2328_Fig6.Area2.N7.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 331  OSPF_RFC2328_Fig6.Area2.N7.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 14  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 10  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 58  OSPF_RFC2328_Fig6.Area1.N1.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 5  OSPF_RFC2328_Fig6.Area1.RT1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 75  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 76  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 92  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 93  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 84  OSPF_RFC2328_Fig6.Area1.N1.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 101  OSPF_RFC2328_Fig6.Area1.N1.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 614  OSPF_RFC2328_Fig6.RT3.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 610  OSPF_RFC2328_Fig6.RT3.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 605  OSPF_RFC2328_Fig6.RT3.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 729  OSPF_RFC2328_Fig6.RT6.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 730  OSPF_RFC2328_Fig6.RT6.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 738  OSPF_RFC2328_Fig6.RT6.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 428  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 424  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 459  OSPF_RFC2328_Fig6.Area3.N10.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 419  OSPF_RFC2328_Fig6.Area3.RT12.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 476  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 477  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 493  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 494  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 485  OSPF_RFC2328_Fig6.Area3.N10.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 502  OSPF_RFC2328_Fig6.Area3.N10.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 831  OSPF_RFC2328_Fig6.RT10.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 827  OSPF_RFC2328_Fig6.RT10.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 822  OSPF_RFC2328_Fig6.RT10.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 741  OSPF_RFC2328_Fig6.RT6.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 742  OSPF_RFC2328_Fig6.RT6.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 750  OSPF_RFC2328_Fig6.RT6.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 235  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 231  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 226  OSPF_RFC2328_Fig6.Area2.RT8.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 764  OSPF_RFC2328_Fig6.RT7.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 222  OSPF_RFC2328_Fig6.Area2.RT8.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 789  OSPF_RFC2328_Fig6.RT7.eth[1].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 854  OSPF_RFC2328_Fig6.RT10.eth[2].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 872  OSPF_RFC2328_Fig6.RT11.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 868  OSPF_RFC2328_Fig6.RT11.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 431  OSPF_RFC2328_Fig6.Area3.N9.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 863  OSPF_RFC2328_Fig6.RT11.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 379  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 380  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 396  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 397  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 448  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 449  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 388  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 405  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 457  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 404  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 400  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 395  OSPF_RFC2328_Fig6.Area3.RT12.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 864  OSPF_RFC2328_Fig6.RT11.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 865  OSPF_RFC2328_Fig6.RT11.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 873  OSPF_RFC2328_Fig6.RT11.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 858  OSPF_RFC2328_Fig6.RT11.networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 391  OSPF_RFC2328_Fig6.Area3.RT12.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 386  OSPF_RFC2328_Fig6.Area3.RT9.eth[1].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 455  OSPF_RFC2328_Fig6.Area3.N9.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 375  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 371  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 504  OSPF_RFC2328_Fig6.Area3.N11.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 366  OSPF_RFC2328_Fig6.Area3.RT9.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 521  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 522  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 538  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 539  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 530  OSPF_RFC2328_Fig6.Area3.N11.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 547  OSPF_RFC2328_Fig6.Area3.N11.host[1].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 672  OSPF_RFC2328_Fig6.RT5.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 668  OSPF_RFC2328_Fig6.RT5.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 663  OSPF_RFC2328_Fig6.RT5.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 635  OSPF_RFC2328_Fig6.RT4.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 636  OSPF_RFC2328_Fig6.RT4.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 644  OSPF_RFC2328_Fig6.RT4.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 643  OSPF_RFC2328_Fig6.RT4.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 639  OSPF_RFC2328_Fig6.RT4.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 634  OSPF_RFC2328_Fig6.RT4.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 664  OSPF_RFC2328_Fig6.RT5.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 665  OSPF_RFC2328_Fig6.RT5.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 673  OSPF_RFC2328_Fig6.RT5.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 684  OSPF_RFC2328_Fig6.RT5.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 680  OSPF_RFC2328_Fig6.RT5.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 675  OSPF_RFC2328_Fig6.RT5.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 753  OSPF_RFC2328_Fig6.RT6.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 754  OSPF_RFC2328_Fig6.RT6.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 762  OSPF_RFC2328_Fig6.RT6.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 843  OSPF_RFC2328_Fig6.RT10.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 839  OSPF_RFC2328_Fig6.RT10.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 333  OSPF_RFC2328_Fig6.Area2.N8.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 834  OSPF_RFC2328_Fig6.RT10.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 876  OSPF_RFC2328_Fig6.RT11.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 877  OSPF_RFC2328_Fig6.RT11.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 350  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 351  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 885  OSPF_RFC2328_Fig6.RT11.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 359  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 884  OSPF_RFC2328_Fig6.RT11.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 880  OSPF_RFC2328_Fig6.RT11.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 875  OSPF_RFC2328_Fig6.RT11.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 835  OSPF_RFC2328_Fig6.RT10.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 836  OSPF_RFC2328_Fig6.RT10.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 844  OSPF_RFC2328_Fig6.RT10.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 859  OSPF_RFC2328_Fig6.RT11.networkLayer.arp  sentReply:vector  ETV
+attr title  "ARP replies sent, vector"
+vector 357  OSPF_RFC2328_Fig6.Area2.N8.host[0].eth[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+5	32745 25 420 420 0.089477298282 0.089477298282 1 82 82 82 6724
+10	32770 26 418 418 0.089470098282 0.089470098282 1 82 82 82 6724
+14	32796 26 417 417 0.089470098282 0.089470098282 1 64 64 64 4096
+58	32822 26 419 419 0.089470198282 0.089470198282 1 90 90 90 8100
+75	32848 26 421 421 0.089477498282 0.089477498282 1 82 82 82 6724
+76	32874 26 421 421 0.089477498282 0.089477498282 1 82 82 82 6724
+84	32900 26 423 423 0.089477498282 0.089477498282 1 64 64 64 4096
+92	32926 26 422 422 0.089477498282 0.089477498282 1 82 82 82 6724
+93	32952 26 422 422 0.089477498282 0.089477498282 1 82 82 82 6724
+101	32978 27 424 424 0.089477498282 0.089477498282 1 64 64 64 4096
+176	33005 26 159 159 0.08782780417 0.08782780417 1 90 90 90 8100
+193	33031 26 161 161 0.08783510417 0.08783510417 1 82 82 82 6724
+194	33057 26 161 161 0.08783510417 0.08783510417 1 82 82 82 6724
+202	33083 26 163 163 0.08783510417 0.08783510417 1 64 64 64 4096
+210	33109 26 162 162 0.08783510417 0.08783510417 1 82 82 82 6724
+211	33135 26 162 162 0.08783510417 0.08783510417 1 82 82 82 6724
+219	33161 26 164 164 0.08783510417 0.08783510417 1 64 64 64 4096
+222	33187 52 509 512 0.092524047472 0.092524047472 2 1 1 2 2
+226	33239 467 466 1088 0.092517887472 0.092677647472 17 64 114 1518 141052
+227	33706 996 143 1113 0.087570845195 0.092678607472 36 64 150 3386 334724
+228	34702 996 143 1113 0.087570845195 0.092678607472 36 64 150 3386 334724
+231	35698 466 464 1082 0.092510047472 0.092670447472 17 64 114 1518 141052
+234	36164 217 210 296 0.088985693439 0.089033733439 8 64 130 666 58876
+235	36381 461 463 1080 0.092510047472 0.092670447472 17 28 96 1176 89248
+236	36842 979 146 1118 0.087570845195 0.092678607472 36 28 132 2684 220496
+238	37821 27 407 407 0.089235622814 0.089235622814 1 82 82 82 6724
+243	37848 27 405 405 0.089228422814 0.089228422814 1 82 82 82 6724
+247	37875 27 404 404 0.089228422814 0.089228422814 1 64 64 64 4096
+250	37902 1681 141 1087 0.087563545195 0.092671307472 61 72 158 6058 627676
+267	39583 1001 145 1115 0.087570845195 0.092678607472 36 64 114 3450 339428
+268	40584 1001 145 1115 0.087570845195 0.092678607472 36 64 114 3450 339428
+274	41585 679 212 859 0.088985693439 0.092622087472 25 64 150 2120 195224
+276	42264 980 148 1120 0.087570845195 0.092678607472 36 28 96 2748 222896
+278	43244 27 406 406 0.089228522814 0.089228522814 1 90 90 90 8100
+295	43271 27 408 408 0.089235822814 0.089235822814 1 82 82 82 6724
+296	43298 27 408 408 0.089235822814 0.089235822814 1 82 82 82 6724
+304	43325 27 410 410 0.089235822814 0.089235822814 1 64 64 64 4096
+322	43352 27 409 409 0.089235822814 0.089235822814 1 82 82 82 6724
+323	43379 27 409 409 0.089235822814 0.089235822814 1 82 82 82 6724
+331	43406 27 411 411 0.089235822814 0.089235822814 1 64 64 64 4096
+333	43433 218 1715 1802 0.09907952101 0.10134887749 8 72 178 780 85080
+350	43651 81 1718 1746 0.09908682101 0.10131549749 3 64 86 232 18216
+351	43732 81 1718 1746 0.09908682101 0.10131549749 3 64 86 232 18216
+357	43813 137 1760 1806 0.10132145749 0.10135841749 5 64 170 484 54896
+359	43950 81 1720 1748 0.09908682101 0.10131549749 3 28 68 160 9504
+366	44031 28 1367 1367 0.096850315973 0.096850315973 1 82 82 82 6724
+371	44059 28 1365 1365 0.096843115973 0.096843115973 1 82 82 82 6724
+375	44087 28 1364 1364 0.096843115973 0.096843115973 1 64 64 64 4096
+379	44115 228 1133 1350 0.094597163719 0.096440940613 8 64 126 782 79612
+380	44343 228 1133 1350 0.094597163719 0.096440940613 8 64 126 782 79612
+386	44571 225 1187 1276 0.096366620613 0.096411140613 8 64 110 634 51868
+388	44796 226 1136 1353 0.094597163719 0.096440940613 8 28 108 620 52720
+391	45022 27 1179 1179 0.096360660613 0.096360660613 1 1 1 1 1
+395	45049 198 1150 1349 0.096354500613 0.096440740613 7 64 126 648 63640
+396	45247 255 1134 1338 0.094597163719 0.096439780613 9 64 110 768 67840
+397	45502 255 1134 1338 0.094597163719 0.096439780613 9 64 110 768 67840
+400	45757 198 1148 1332 0.096346980613 0.096430020613 7 64 126 648 63640
+404	45955 198 1147 1331 0.096346980613 0.096430020613 7 28 108 504 41248
+405	46153 252 1137 1341 0.094597163719 0.096439780613 9 28 92 588 41776
+419	46405 27 443 443 0.090269227451 0.090269227451 1 82 82 82 6724
+424	46432 27 441 441 0.090262027451 0.090262027451 1 82 82 82 6724
+428	46459 27 440 440 0.090262027451 0.090262027451 1 64 64 64 4096
+431	46486 454 1131 1335 0.094589863719 0.096430880613 16 72 134 1544 155160
+448	46940 228 1135 1352 0.094597163719 0.096440940613 8 64 126 782 79612
+449	47168 228 1135 1352 0.094597163719 0.096440940613 8 64 126 782 79612
+455	47396 225 1189 1278 0.096366620613 0.096411140613 8 64 110 634 51868
+457	47621 226 1138 1355 0.094597163719 0.096440940613 8 28 108 620 52720
+459	47847 27 442 442 0.090262127451 0.090262127451 1 90 90 90 8100
+476	47874 27 444 444 0.090269427451 0.090269427451 1 82 82 82 6724
+477	47901 27 444 444 0.090269427451 0.090269427451 1 82 82 82 6724
+485	47928 27 446 446 0.090269427451 0.090269427451 1 64 64 64 4096
+493	47955 27 445 445 0.090269427451 0.090269427451 1 82 82 82 6724
+494	47982 27 445 445 0.090269427451 0.090269427451 1 82 82 82 6724
+502	48009 27 447 447 0.090269427451 0.090269427451 1 64 64 64 4096
+504	48036 28 1366 1366 0.096843215973 0.096843215973 1 90 90 90 8100
+521	48064 28 1368 1368 0.096850515973 0.096850515973 1 82 82 82 6724
+522	48092 28 1368 1368 0.096850515973 0.096850515973 1 82 82 82 6724
+530	48120 28 1370 1370 0.096850515973 0.096850515973 1 64 64 64 4096
+538	48148 28 1369 1369 0.096850515973 0.096850515973 1 82 82 82 6724
+539	48176 28 1369 1369 0.096850515973 0.096850515973 1 82 82 82 6724
+547	48204 28 1371 1371 0.096850515973 0.096850515973 1 64 64 64 4096
+593	48232 26 160 160 0.08783490417 0.08783490417 1 82 82 82 6724
+598	48258 26 158 158 0.08782770417 0.08782770417 1 82 82 82 6724
+602	48284 26 157 157 0.08782770417 0.08782770417 1 64 64 64 4096
+605	48310 27 432 432 0.089880600851 0.089880600851 1 82 82 82 6724
+610	48337 27 431 431 0.089873400851 0.089873400851 1 82 82 82 6724
+614	48364 27 430 430 0.089873400851 0.089873400851 1 64 64 64 4096
+634	48391 227 1389 1527 0.098003841822 0.098108961822 8 70 114 744 71328
+635	48618 342 1380 1672 0.097457992058 0.098724998686 12 70 150 1208 128752
+636	48960 342 1380 1672 0.097457992058 0.098724998686 12 70 150 1208 128752
+639	49302 227 1388 1525 0.097996321822 0.098099201822 8 70 114 744 71328
+643	49529 224 1387 1524 0.097996321822 0.098099201822 8 52 96 600 47136
+644	49753 339 1381 1673 0.097457992058 0.098724998686 12 52 132 992 89152
+663	50092 342 1379 1671 0.097457892058 0.098724898686 12 70 150 1208 128752
+664	50434 227 1390 1528 0.098003941822 0.098109061822 8 70 114 744 71328
+665	50661 227 1390 1528 0.098003941822 0.098109061822 8 70 114 744 71328
+668	50888 342 1378 1645 0.097450692058 0.098704418686 12 70 150 1208 128752
+672	51230 339 1377 1642 0.097450692058 0.098704418686 12 52 132 992 89152
+673	51569 224 1391 1529 0.098003941822 0.098109061822 8 52 96 600 47136
+675	51793 314 1543 1704 0.098640298686 0.098766178686 11 70 190 1174 136940
+676	52107 197 132 1700 0.072656061897 0.098765418686 7 70 138 674 69724
+677	52304 197 132 1700 0.072656061897 0.098765418686 7 70 138 674 69724
+680	52501 314 1542 1646 0.098632778686 0.098704418686 11 70 190 1174 136940
+684	52815 311 1541 1643 0.098632778686 0.098704418686 11 52 172 976 98240
+685	53126 197 133 1701 0.072656061897 0.098765418686 7 52 120 548 47728
+729	53323 27 433 433 0.089880700851 0.089880700851 1 82 82 82 6724
+730	53350 27 433 433 0.089880700851 0.089880700851 1 82 82 82 6724
+738	53377 27 434 434 0.089880700851 0.089880700851 1 64 64 64 4096
+741	53404 27 456 456 0.092481293728 0.092481293728 1 82 82 82 6724
+742	53431 27 456 456 0.092481293728 0.092481293728 1 82 82 82 6724
+750	53458 27 457 457 0.092481293728 0.092481293728 1 64 64 64 4096
+752	53485 197 131 1699 0.072655961897 0.098765318686 7 70 138 674 69724
+753	53682 314 1544 1705 0.098640398686 0.098766278686 11 70 190 1174 136940
+754	53996 314 1544 1705 0.098640398686 0.098766278686 11 70 190 1174 136940
+757	54310 197 130 1697 0.072648761897 0.098753638686 7 70 138 674 69724
+761	54507 197 129 1696 0.072648761897 0.098753638686 7 52 120 548 47728
+762	54704 311 1545 1707 0.098640398686 0.098766278686 11 52 172 976 98240
+764	55015 26 479 479 0.092518087472 0.092518087472 1 1 1 1 1
+765	55041 26 202 202 0.088979733439 0.088979733439 1 1 1 1 1
+781	55067 608 173 1112 0.088973573439 0.092678407472 22 64 150 2028 197040
+782	55675 854 144 1094 0.087570845195 0.092677847472 31 64 114 2844 270640
+783	56529 854 144 1094 0.087570845195 0.092677847472 31 64 114 2844 270640
+786	57383 605 171 920 0.088966053439 0.092632807472 22 64 150 2028 197040
+789	57988 218 526 669 0.092530007472 0.092578767472 8 64 150 698 66972
+790	58206 596 170 918 0.088966053439 0.092632807472 22 28 132 1596 128496
+791	58802 842 147 1100 0.087570845195 0.092677847472 31 28 96 2232 174304
+817	59644 78 185 1738 0.088973773439 0.10130953749 3 1 1 3 3
+822	59722 27 455 455 0.092481193728 0.092481193728 1 82 82 82 6724
+827	59749 27 454 454 0.092473993728 0.092473993728 1 82 82 82 6724
+831	59776 27 453 453 0.092473993728 0.092473993728 1 64 64 64 4096
+834	59803 109 1716 1790 0.09908662101 0.10134857749 4 64 170 386 44620
+835	59912 109 1731 1805 0.10130953749 0.10135841749 4 64 110 330 28492
+836	60021 109 1731 1805 0.10130953749 0.10135841749 4 64 110 330 28492
+839	60130 109 1714 1787 0.09907942101 0.10133433749 4 64 170 386 44620
+843	60239 109 1713 1786 0.09907942101 0.10133433749 4 28 152 296 30688
+844	60348 108 1733 1807 0.10130953749 0.10135841749 4 28 92 240 16576
+846	60456 605 142 1089 0.087570645195 0.092677647472 22 64 150 2024 196560
+847	61061 831 175 1114 0.088973773439 0.092678607472 30 64 130 2790 268716
+848	61892 831 175 1114 0.088973773439 0.092678607472 30 64 130 2790 268716
+851	62723 605 140 1083 0.087563445195 0.092670447472 22 64 150 2024 196560
+854	63328 244 547 857 0.092536727472 0.092622087472 9 64 150 756 69376
+855	63572 597 139 1081 0.087563445195 0.092670447472 22 28 132 1592 128160
+856	64169 817 178 1119 0.088973773439 0.092678607472 30 28 112 2196 174000
+858	64986 27 1162 1162 0.096354700613 0.096354700613 1 1 1 1 1
+859	65013 26 1751 1751 0.10131549749 0.10131549749 1 1 1 1 1
+863	65039 255 1132 1336 0.094596963719 0.096439580613 9 64 110 768 67840
+864	65294 198 1152 1351 0.096354700613 0.096440940613 7 64 126 648 63640
+865	65492 198 1152 1351 0.096354700613 0.096440940613 7 64 126 648 63640
+868	65690 255 1130 1316 0.094589763719 0.096422060613 9 64 110 768 67840
+872	65945 252 1129 1315 0.094589763719 0.096422060613 9 28 92 588 41776
+873	66197 198 1155 1354 0.096354700613 0.096440940613 7 28 108 504 41248
+875	66395 109 1730 1804 0.10130933749 0.10135821749 4 64 110 330 28492
+876	66504 109 1717 1791 0.09908682101 0.10134877749 4 64 170 386 44620
+877	66613 109 1717 1791 0.09908682101 0.10134877749 4 64 170 386 44620
+880	66722 137 1728 1801 0.10130181749 0.10134877749 5 64 122 452 43376
+884	66859 136 1727 1799 0.10130181749 0.10134877749 5 28 104 344 27392
+885	66995 109 1719 1793 0.09908682101 0.10134877749 4 28 152 296 30688

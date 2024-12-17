@@ -1,0 +1,224 @@
+version 2
+run ShutdownAndRestart-0-20241211-20:19:59-7052
+attr configname ShutdownAndRestart
+attr datetime 20241211-20:19:59
+attr experiment ShutdownAndRestart
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SimpleTest
+attr processid 7052
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H1.udpApp[0].destAddresses "\"H2\""
+param **.H2.udpApp[0].destAddresses "\"H1\""
+param **.arp.cacheTimeout 1s
+param **.numUdpApps 2
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.scenarioManager.script "xml(         \"<script>\\n\" +         \"<at t='3s'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R1'/></at>\\n\" +         \"<at t='6s'><tell module='lifecycleController' operation='NodeStartOperation' target='R1'/></at>\\n\" +         \"<at t='10s'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R1'/></at>\\n\" +         \"<at t='11'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R2'/></at>\\n\" +         \"<at t='20s'><tell module='lifecycleController' operation='NodeStartOperation' target='R1'/></at>\\n\" +         \"<at t='21s'><tell module='lifecycleController' operation='NodeStartOperation' target='R2'/></at>\\n\" +         \"</script>\")"
+param **.udpApp[0].destPort 1234
+param **.udpApp[0].messageLength "32 bytes"
+param **.udpApp[0].sendInterval 0.1s
+param **.udpApp[0].startTime 4s
+param **.udpApp[0].typename "\"UDPBasicApp\""
+param **.udpApp[1].localPort 1234
+param **.udpApp[1].typename "\"UDPEchoApp\""
+
+vector 43  SimpleTest.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 39  SimpleTest.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 0  SimpleTest.N1  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 34  SimpleTest.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 18  SimpleTest.H1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 19  SimpleTest.H1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 27  SimpleTest.H1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 84  SimpleTest.R2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 80  SimpleTest.R2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 1  SimpleTest.N2  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 75  SimpleTest.R2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 103  SimpleTest.H2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 104  SimpleTest.H2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 112  SimpleTest.H2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 72  SimpleTest.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 68  SimpleTest.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 63  SimpleTest.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 47  SimpleTest.R1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 48  SimpleTest.R1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 56  SimpleTest.R1.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 55  SimpleTest.R1.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 51  SimpleTest.R1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 46  SimpleTest.R1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 64  SimpleTest.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 65  SimpleTest.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 73  SimpleTest.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+0	21	0.089470198282	90
+1	31	0.107198967093	90
+18	23	0.089477498282	82
+19	23	0.089477498282	82
+27	24	0.089477498282	64
+34	22	0.089477298282	82
+39	20	0.089470098282	82
+43	19	0.089470098282	64
+46	51	0.108855327824	86
+46	69	0.108868007824	70
+46	87	0.108882287824	90
+46	111	0.108896567824	70
+46	126	0.108904087824	74
+46	143	0.108913847824	102
+47	42	0.10853300675	82
+47	61	0.108861767824	70
+47	79	0.108874447824	70
+47	100	0.108890327824	90
+47	118	0.108897847824	74
+47	136	0.108913087824	102
+48	42	0.10853300675	82
+48	61	0.108861767824	70
+48	79	0.108874447824	70
+48	100	0.108890327824	90
+48	118	0.108897847824	74
+48	136	0.108913087824	102
+51	50	0.108847807824	86
+51	67	0.108861767824	70
+51	85	0.108874447824	90
+51	108	0.108890327824	70
+51	109	0.108890327824	74
+51	124	0.108897847824	102
+51	142	0.108913087824	126
+55	49	0.108847807824	68
+55	66	0.108861767824	52
+55	84	0.108874447824	72
+55	106	0.108890327824	52
+55	107	0.108890327824	56
+55	123	0.108897847824	84
+55	141	0.108913087824	108
+56	43	0.10853300675	64
+56	62	0.108861767824	52
+56	80	0.108874447824	52
+56	101	0.108890327824	72
+56	119	0.108897847824	56
+56	137	0.108913087824	84
+63	41	0.10853290675	82
+63	60	0.108861667824	70
+63	78	0.108874347824	70
+63	99	0.108890227824	90
+63	117	0.108897747824	74
+63	135	0.108912987824	102
+64	52	0.108855427824	86
+64	70	0.108868107824	70
+64	88	0.108882387824	90
+64	112	0.108896667824	70
+64	127	0.108904187824	74
+64	144	0.108913947824	102
+65	52	0.108855427824	86
+65	70	0.108868107824	70
+65	88	0.108882387824	90
+65	112	0.108896667824	70
+65	127	0.108904187824	74
+65	144	0.108913947824	102
+68	40	0.10852570675	82
+68	58	0.108855427824	70
+68	76	0.108868107824	70
+68	96	0.108882387824	90
+68	97	0.108882387824	74
+68	133	0.108904187824	102
+68	151	0.108913947824	126
+72	39	0.10852570675	64
+72	57	0.108855427824	52
+72	75	0.108868107824	52
+72	94	0.108882387824	72
+72	95	0.108882387824	56
+72	132	0.108904187824	84
+72	150	0.108913947824	108
+73	53	0.108855427824	68
+73	71	0.108868107824	52
+73	89	0.108882387824	72
+73	113	0.108896667824	52
+73	128	0.108904187824	56
+73	146	0.108913947824	84
+75	32	0.107206067093	82
+80	30	0.107198867093	82
+84	29	0.107198867093	64
+103	33	0.107206267093	82
+104	33	0.107206267093	82
+112	34	0.107206267093	64

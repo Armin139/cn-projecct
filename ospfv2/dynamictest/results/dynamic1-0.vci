@@ -1,0 +1,221 @@
+file 11466 1732263266                                           
+version 2
+run dynamic1-0-20241122-00:13:48-11732
+attr configname dynamic1
+attr datetime 20241122-00:13:48
+attr experiment dynamic1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network DynamicTest
+attr processid 11732
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H1.udpApp[0].destAddresses "\"H2\""
+param **.H2.udpApp[0].destAddresses "\"H1\""
+param **.arp.cacheTimeout 1s
+param **.numUdpApps 2
+param **.ospf.authenticationKey "\"0x00\""
+param **.ospf.authenticationType "\"NullType\""
+param **.ospf.helloInterval 10s
+param **.ospf.interfaceTransmissionDelay 1
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.ospf.retransmissionInterval 5s
+param **.ospf.routerDeadInterval 40s
+param **.udpApp[0].destPort 1234
+param **.udpApp[0].messageLength "32 bytes"
+param **.udpApp[0].sendInterval 0.1s
+param **.udpApp[0].startTime 100s
+param **.udpApp[0].stopTime "this.startTime + 400s"
+param **.udpApp[0].typename "\"UDPBasicApp\""
+param **.udpApp[1].localPort 1234
+param **.udpApp[1].typename "\"UDPEchoApp\""
+param *.configurator.addDefaultRoutes false
+param *.configurator.addStaticRoutes false
+param *.configurator.addSubnetRoutes false
+param *.scenarioManager.script "xmldoc(\"scenario1.xml\")"
+
+vector 111  DynamicTest.RB.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 107  DynamicTest.RB.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 102  DynamicTest.RB.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 57  DynamicTest.R1.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 58  DynamicTest.R1.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 66  DynamicTest.R1.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 41  DynamicTest.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 37  DynamicTest.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 32  DynamicTest.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 16  DynamicTest.H1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 17  DynamicTest.H1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 25  DynamicTest.H1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 164  DynamicTest.R2.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 160  DynamicTest.R2.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 155  DynamicTest.R2.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 115  DynamicTest.RB.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 116  DynamicTest.RB.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 124  DynamicTest.RB.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 94  DynamicTest.RA.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 90  DynamicTest.RA.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 85  DynamicTest.RA.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 144  DynamicTest.R2.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 145  DynamicTest.R2.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 153  DynamicTest.R2.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 152  DynamicTest.R2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 148  DynamicTest.R2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 143  DynamicTest.R2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 86  DynamicTest.RA.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 87  DynamicTest.RA.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 95  DynamicTest.RA.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 123  DynamicTest.RB.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 119  DynamicTest.RB.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 114  DynamicTest.RB.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 156  DynamicTest.R2.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 157  DynamicTest.R2.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 165  DynamicTest.R2.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+16	8097 25 38 38 0.089477398282 0.089477398282 1 82 82 82 6724
+17	8122 25 38 38 0.089477398282 0.089477398282 1 82 82 82 6724
+25	8147 25 39 39 0.089477398282 0.089477398282 1 64 64 64 4096
+32	8172 25 37 37 0.089477298282 0.089477298282 1 82 82 82 6724
+37	8197 25 36 36 0.089470098282 0.089470098282 1 82 82 82 6724
+41	8222 25 35 35 0.089470098282 0.089470098282 1 64 64 64 4096
+57	8247 25 28 28 0.089235722814 0.089235722814 1 82 82 82 6724
+58	8272 25 28 28 0.089235722814 0.089235722814 1 82 82 82 6724
+66	8297 25 29 29 0.089235722814 0.089235722814 1 64 64 64 4096
+85	8322 180 56 168 0.092517247472 0.096426400613 7 70 114 602 53116
+86	8502 182 67 174 0.096354600613 0.096427360613 7 70 114 638 59804
+87	8684 182 67 174 0.096354600613 0.096427360613 7 70 114 638 59804
+90	8866 180 55 166 0.092510047472 0.096416640613 7 70 114 602 53116
+94	9046 179 54 165 0.092510047472 0.096416640613 7 52 96 476 33712
+95	9225 180 68 176 0.096354600613 0.096427360613 7 52 96 512 39104
+102	9405 26 27 27 0.089235622814 0.089235622814 1 82 82 82 6724
+107	9431 26 26 26 0.089228422814 0.089228422814 1 82 82 82 6724
+111	9457 26 25 25 0.089228422814 0.089228422814 1 64 64 64 4096
+114	9483 54 184 202 0.096850635973 0.096863315973 2 70 86 156 12296
+115	9537 80 47 212 0.090269327451 0.096869755973 3 70 82 222 16524
+116	9617 80 47 212 0.090269327451 0.096869755973 3 70 82 222 16524
+119	9697 81 183 218 0.096843115973 0.096869755973 3 70 90 246 20396
+123	9778 81 182 217 0.096843115973 0.096869755973 3 52 72 192 12512
+124	9859 80 48 213 0.090269327451 0.096869755973 3 52 64 168 9504
+143	9939 189 66 173 0.096354500613 0.096427260613 7 70 114 638 59804
+144	10128 187 57 169 0.092517347472 0.096426500613 7 70 114 602 53116
+145	10315 187 57 169 0.092517347472 0.096426500613 7 70 114 602 53116
+148	10502 189 65 157 0.096346980613 0.096408380613 7 70 114 638 59804
+152	10691 187 64 156 0.096346980613 0.096408380613 7 52 96 512 39104
+153	10878 186 58 170 0.092517347472 0.096426500613 7 52 96 476 33712
+155	11064 80 46 211 0.090269227451 0.096869655973 3 70 82 222 16524
+156	11144 54 185 203 0.096850735973 0.096863415973 2 70 86 156 12296
+157	11198 54 185 203 0.096850735973 0.096863415973 2 70 86 156 12296
+160	11252 80 45 209 0.090262027451 0.096863415973 3 70 82 222 16524
+164	11332 80 44 208 0.090262027451 0.096863415973 3 52 64 168 9504
+165	11412 54 186 204 0.096850735973 0.096863415973 2 52 68 120 7328

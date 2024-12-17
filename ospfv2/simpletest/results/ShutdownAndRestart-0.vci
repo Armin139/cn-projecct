@@ -1,0 +1,161 @@
+file 8708 1733977225                                            
+version 2
+run ShutdownAndRestart-0-20241211-20:19:59-7052
+attr configname ShutdownAndRestart
+attr datetime 20241211-20:19:59
+attr experiment ShutdownAndRestart
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SimpleTest
+attr processid 7052
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.H1.udpApp[0].destAddresses "\"H2\""
+param **.H2.udpApp[0].destAddresses "\"H1\""
+param **.arp.cacheTimeout 1s
+param **.numUdpApps 2
+param **.ospf.ospfConfig "xmldoc(\"ASConfig.xml\")"
+param **.scenarioManager.script "xml(         \"<script>\\n\" +         \"<at t='3s'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R1'/></at>\\n\" +         \"<at t='6s'><tell module='lifecycleController' operation='NodeStartOperation' target='R1'/></at>\\n\" +         \"<at t='10s'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R1'/></at>\\n\" +         \"<at t='11'><tell module='lifecycleController' operation='NodeShutdownOperation' target='R2'/></at>\\n\" +         \"<at t='20s'><tell module='lifecycleController' operation='NodeStartOperation' target='R1'/></at>\\n\" +         \"<at t='21s'><tell module='lifecycleController' operation='NodeStartOperation' target='R2'/></at>\\n\" +         \"</script>\")"
+param **.udpApp[0].destPort 1234
+param **.udpApp[0].messageLength "32 bytes"
+param **.udpApp[0].sendInterval 0.1s
+param **.udpApp[0].startTime 4s
+param **.udpApp[0].typename "\"UDPBasicApp\""
+param **.udpApp[1].localPort 1234
+param **.udpApp[1].typename "\"UDPEchoApp\""
+
+vector 43  SimpleTest.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 39  SimpleTest.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 0  SimpleTest.N1  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 34  SimpleTest.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 18  SimpleTest.H1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 19  SimpleTest.H1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 27  SimpleTest.H1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 84  SimpleTest.R2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 80  SimpleTest.R2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 1  SimpleTest.N2  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 75  SimpleTest.R2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 103  SimpleTest.H2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 104  SimpleTest.H2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 112  SimpleTest.H2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 72  SimpleTest.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 68  SimpleTest.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 63  SimpleTest.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 47  SimpleTest.R1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 48  SimpleTest.R1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 56  SimpleTest.R1.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 55  SimpleTest.R1.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 51  SimpleTest.R1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 46  SimpleTest.R1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 64  SimpleTest.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 65  SimpleTest.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 73  SimpleTest.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+0	6416 24 21 21 0.089470198282 0.089470198282 1 90 90 90 8100
+1	6440 24 31 31 0.107198967093 0.107198967093 1 90 90 90 8100
+18	6464 25 23 23 0.089477498282 0.089477498282 1 82 82 82 6724
+19	6489 25 23 23 0.089477498282 0.089477498282 1 82 82 82 6724
+27	6514 25 24 24 0.089477498282 0.089477498282 1 64 64 64 4096
+34	6539 25 22 22 0.089477298282 0.089477298282 1 82 82 82 6724
+39	6564 25 20 20 0.089470098282 0.089470098282 1 82 82 82 6724
+43	6589 25 19 19 0.089470098282 0.089470098282 1 64 64 64 4096
+46	6614 154 51 143 0.108855327824 0.108913847824 6 70 102 492 41176
+47	6768 153 42 136 0.10853300675 0.108913087824 6 70 102 488 40504
+48	6921 153 42 136 0.10853300675 0.108913087824 6 70 102 488 40504
+51	7074 181 50 142 0.108847807824 0.108913087824 7 70 126 618 57052
+55	7255 180 49 141 0.108847807824 0.108913087824 7 52 108 492 37072
+56	7435 152 43 137 0.10853300675 0.108913087824 6 52 84 380 24880
+63	7587 152 41 135 0.10853290675 0.108912987824 6 70 102 488 40504
+64	7739 154 52 144 0.108855427824 0.108913947824 6 70 102 492 41176
+65	7893 154 52 144 0.108855427824 0.108913947824 6 70 102 492 41176
+68	8047 178 40 151 0.10852570675 0.108913947824 7 70 126 614 56380
+72	8225 177 39 150 0.10852570675 0.108913947824 7 52 108 488 36544
+73	8402 153 53 146 0.108855427824 0.108913947824 6 52 84 384 25408
+75	8555 25 32 32 0.107206067093 0.107206067093 1 82 82 82 6724
+80	8580 25 30 30 0.107198867093 0.107198867093 1 82 82 82 6724
+84	8605 25 29 29 0.107198867093 0.107198867093 1 64 64 64 4096
+103	8630 26 33 33 0.107206267093 0.107206267093 1 82 82 82 6724
+104	8656 26 33 33 0.107206267093 0.107206267093 1 82 82 82 6724
+112	8682 26 34 34 0.107206267093 0.107206267093 1 64 64 64 4096

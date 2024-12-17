@@ -1,0 +1,266 @@
+file 15308 1733992433                                           
+version 2
+run General-0-20241212-00:33:06-12504
+attr configname General
+attr datetime 20241212-00:33:06
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network testActiveDown
+attr processid 12504
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.R1.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R1']/Interfaces\")"
+param **.R2.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R2']/Interfaces\")"
+param **.R3.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R3']/Interfaces\")"
+param **.enableCLNS false
+param **.enableIPv6 false
+param **.scenarioManager.script "xmldoc(\"scenario-link-down.xml\")"
+
+vector 0  testActiveDown.R1.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 22  testActiveDown.R2.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 44  testActiveDown.R3.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 19  testActiveDown.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 41  testActiveDown.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 63  testActiveDown.R3.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 15  testActiveDown.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 37  testActiveDown.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 59  testActiveDown.R3.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 10  testActiveDown.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 32  testActiveDown.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 54  testActiveDown.R3.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 101  testActiveDown.SW1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 102  testActiveDown.SW1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 112  testActiveDown.SW1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 113  testActiveDown.SW1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 123  testActiveDown.SW1.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 124  testActiveDown.SW1.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 116  testActiveDown.SW1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 127  testActiveDown.SW1.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 138  testActiveDown.SW1.eth[3].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 149  testActiveDown.SW1.eth[4].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 105  testActiveDown.SW1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 133  testActiveDown.SW1.eth[3].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 144  testActiveDown.SW1.eth[4].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 72  testActiveDown.PC1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 73  testActiveDown.PC1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 89  testActiveDown.PC2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 90  testActiveDown.PC2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 81  testActiveDown.PC1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 98  testActiveDown.PC2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 100  testActiveDown.SW1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 111  testActiveDown.SW1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 122  testActiveDown.SW1.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 11  testActiveDown.R1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 12  testActiveDown.R1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 33  testActiveDown.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 34  testActiveDown.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 55  testActiveDown.R3.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 56  testActiveDown.R3.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 20  testActiveDown.R1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 42  testActiveDown.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 64  testActiveDown.R3.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 1  testActiveDown.R1.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 2  testActiveDown.R1.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 23  testActiveDown.R2.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 24  testActiveDown.R2.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 45  testActiveDown.R3.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 46  testActiveDown.R3.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+0	9884 34 36 414 10 20.00001258 2 20 20 40 800
+1	9918 131 116 447 10.00001258 20.00001834 6 20 20 120 2400
+2	10049 125 116 447 10.00001258 20.00001834 6 1 6 21 91
+10	10174 45 59 432 10.00000576 20.00001834 2 64 64 128 8192
+11	10219 160 101 428 10.00001258 20.00001834 7 64 64 448 28672
+12	10379 160 101 428 10.00001258 20.00001834 7 64 64 448 28672
+15	10539 36 53 419 10 20.00001258 2 64 64 128 8192
+19	10575 36 50 418 10 20.00001258 2 40 40 80 3200
+20	10611 160 104 433 10.00001258 20.00001834 7 28 40 268 10384
+22	10771 13 38 38 10 10 1 20 20 20 400
+23	10784 137 117 448 10.00001258 20.00001834 6 20 20 120 2400
+24	10921 131 117 448 10.00001258 20.00001834 6 1 6 21 91
+32	11052 22 60 60 10.00000576 10.00000576 1 64 64 64 4096
+33	11074 160 102 429 10.00001258 20.00001834 7 64 64 448 28672
+34	11234 160 102 429 10.00001258 20.00001834 7 64 64 448 28672
+37	11394 13 54 54 10 10 1 64 64 64 4096
+41	11407 13 51 51 10 10 1 40 40 40 1600
+42	11420 160 105 434 10.00001258 20.00001834 7 28 40 268 10384
+44	11580 83 40 350 10 20 6 20 20 120 2400
+45	11663 45 118 160 10.00001258 10.0000193 2 20 20 40 800
+46	11708 43 118 160 10.00001258 10.0000193 2 1 2 3 5
+54	11751 137 61 399 10.00000576 20.00001248 6 64 64 384 24576
+55	11888 45 103 145 10.00001258 10.0000193 2 64 64 128 8192
+56	11933 45 103 145 10.00001258 10.0000193 2 64 64 128 8192
+59	11978 97 55 363 10 20 7 64 64 448 28672
+63	12075 97 52 361 10 20 7 28 40 268 10384
+64	12172 45 106 148 10.00001258 10.0000193 2 40 40 80 3200
+72	12217 183 88 430 10.00001162 20.00001834 8 64 64 512 32768
+73	12400 183 88 430 10.00001162 20.00001834 8 64 64 512 32768
+81	12583 183 90 435 10.00001162 20.00001834 8 28 40 308 11984
+89	12766 183 89 431 10.00001162 20.00001834 8 64 64 512 32768
+90	12949 183 89 431 10.00001162 20.00001834 8 64 64 512 32768
+98	13132 183 91 436 10.00001162 20.00001834 8 28 40 308 11984
+100	13315 167 96 424 10.00001253 20.00001829 7 64 64 448 28672
+101	13482 47 62 453 10.00000581 20.00001839 2 64 64 128 8192
+102	13529 47 62 453 10.00000581 20.00001839 2 64 64 128 8192
+105	13576 166 72 406 10.00000581 20.00001253 7 64 64 448 28672
+111	13742 167 97 425 10.00001253 20.00001829 7 64 64 448 28672
+112	13909 23 63 63 10.00000581 10.00000581 1 64 64 64 4096
+113	13932 23 63 63 10.00000581 10.00000581 1 64 64 64 4096
+116	13955 190 68 455 10.00000581 20.00001839 8 64 64 512 32768
+122	14145 47 98 140 10.00001253 10.00001925 2 64 64 128 8192
+123	14192 143 64 400 10.00000581 20.00001253 6 64 64 384 24576
+124	14335 143 64 400 10.00000581 20.00001253 6 64 64 384 24576
+127	14478 70 69 456 10.00000581 20.00001839 3 64 64 192 12288
+133	14548 191 86 426 10.00001157 20.00001829 8 64 64 512 32768
+138	14739 189 70 408 10.00000581 20.00001253 8 64 64 512 32768
+144	14928 191 87 427 10.00001157 20.00001829 8 64 64 512 32768
+149	15119 189 71 409 10.00000581 20.00001253 8 64 64 512 32768

@@ -1,0 +1,697 @@
+version 2
+run General-0-20241211-22:32:41-5436
+attr configname General
+attr datetime 20241211-22:32:41
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network testActiveChoose
+attr processid 5436
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.R1.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R1']/Interfaces\")"
+param **.R2.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R2']/Interfaces\")"
+param **.R3.hsrp.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='R3']/Interfaces\")"
+param **.enableCLNS false
+param **.enableIPv6 false
+
+vector 0  testActiveChoose.R1.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 22  testActiveChoose.R2.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 44  testActiveChoose.R3.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 19  testActiveChoose.R1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 41  testActiveChoose.R2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 63  testActiveChoose.R3.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 15  testActiveChoose.R1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 37  testActiveChoose.R2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 59  testActiveChoose.R3.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 10  testActiveChoose.R1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 32  testActiveChoose.R2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 54  testActiveChoose.R3.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 101  testActiveChoose.SW1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 102  testActiveChoose.SW1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 112  testActiveChoose.SW1.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 113  testActiveChoose.SW1.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 123  testActiveChoose.SW1.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 124  testActiveChoose.SW1.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 116  testActiveChoose.SW1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 127  testActiveChoose.SW1.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 138  testActiveChoose.SW1.eth[3].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 149  testActiveChoose.SW1.eth[4].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 105  testActiveChoose.SW1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 133  testActiveChoose.SW1.eth[3].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 144  testActiveChoose.SW1.eth[4].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 72  testActiveChoose.PC1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 73  testActiveChoose.PC1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 89  testActiveChoose.PC2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 90  testActiveChoose.PC2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 81  testActiveChoose.PC1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 98  testActiveChoose.PC2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 100  testActiveChoose.SW1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 111  testActiveChoose.SW1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 122  testActiveChoose.SW1.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 11  testActiveChoose.R1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 12  testActiveChoose.R1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 33  testActiveChoose.R2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 34  testActiveChoose.R2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 55  testActiveChoose.R3.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 56  testActiveChoose.R3.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 20  testActiveChoose.R1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 42  testActiveChoose.R2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 64  testActiveChoose.R3.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 1  testActiveChoose.R1.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 2  testActiveChoose.R1.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 23  testActiveChoose.R2.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 24  testActiveChoose.R2.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 45  testActiveChoose.R3.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 46  testActiveChoose.R3.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+0	36	10	20
+0	414	20.00001258	20
+0	700	30.00001834	20
+1	116	10.00001258	20
+1	158	10.0000193	20
+1	226	13.00001162	20
+1	278	16.00001162	20
+1	330	19.00001162	20
+1	447	20.00001834	20
+1	504	20.00002506	20
+1	578	23.00001162	20
+1	631	26.00001162	20
+1	683	29.00001162	20
+1	767	30.00003092	20
+1	839	32.00001162	20
+2	116	10.00001258	1
+2	158	10.0000193	2
+2	226	13.00001162	3
+2	278	16.00001162	4
+2	330	19.00001162	5
+2	447	20.00001834	6
+2	504	20.00002506	7
+2	578	23.00001162	8
+2	631	26.00001162	9
+2	683	29.00001162	10
+2	767	30.00003092	11
+2	839	32.00001162	12
+10	59	10.00000576	64
+10	432	20.00001834	64
+10	715	30.0000241	64
+11	101	10.00001258	64
+11	143	10.0000193	64
+11	208	13.00001162	64
+11	260	16.00001162	64
+11	312	19.00001162	64
+11	379	20.00001162	64
+11	428	20.00001834	64
+11	488	20.00002506	64
+11	560	23.00001162	64
+11	613	26.00001162	64
+11	665	29.00001162	64
+11	757	30.00003092	64
+11	821	32.00001162	64
+12	101	10.00001258	64
+12	143	10.0000193	64
+12	208	13.00001162	64
+12	260	16.00001162	64
+12	312	19.00001162	64
+12	379	20.00001162	64
+12	428	20.00001834	64
+12	488	20.00002506	64
+12	560	23.00001162	64
+12	613	26.00001162	64
+12	665	29.00001162	64
+12	757	30.00003092	64
+12	821	32.00001162	64
+15	53	10	64
+15	419	20.00001258	64
+15	711	30.00001834	64
+19	50	10	40
+19	418	20.00001258	40
+19	709	30.00001834	40
+20	104	10.00001258	40
+20	146	10.0000193	40
+20	212	13.00001162	40
+20	264	16.00001162	40
+20	316	19.00001162	40
+20	383	20.00001162	28
+20	433	20.00001834	40
+20	492	20.00002506	40
+20	564	23.00001162	40
+20	617	26.00001162	40
+20	669	29.00001162	40
+20	759	30.00003092	40
+20	825	32.00001162	40
+22	38	10	20
+22	702	30.00001834	20
+22	854	33.00001834	20
+23	117	10.00001258	20
+23	159	10.0000193	20
+23	227	13.00001162	20
+23	279	16.00001162	20
+23	331	19.00001162	20
+23	448	20.00001834	20
+23	503	20.00002506	20
+23	530	20.00003178	20
+23	579	23.00001162	20
+23	632	26.00001162	20
+23	684	29.00001162	20
+23	768	30.00003092	20
+23	840	32.00001162	20
+24	117	10.00001258	1
+24	159	10.0000193	2
+24	227	13.00001162	3
+24	279	16.00001162	4
+24	331	19.00001162	5
+24	448	20.00001834	6
+24	503	20.00002506	7
+24	530	20.00003178	8
+24	579	23.00001162	9
+24	632	26.00001162	10
+24	684	29.00001162	11
+24	768	30.00003092	12
+24	840	32.00001162	13
+32	60	10.00000576	64
+32	716	30.0000241	64
+32	861	33.0000241	64
+33	102	10.00001258	64
+33	144	10.0000193	64
+33	209	13.00001162	64
+33	261	16.00001162	64
+33	313	19.00001162	64
+33	380	20.00001162	64
+33	429	20.00001834	64
+33	485	20.00002506	64
+33	517	20.00003178	64
+33	561	23.00001162	64
+33	614	26.00001162	64
+33	666	29.00001162	64
+33	758	30.00003092	64
+33	822	32.00001162	64
+34	102	10.00001258	64
+34	144	10.0000193	64
+34	209	13.00001162	64
+34	261	16.00001162	64
+34	313	19.00001162	64
+34	380	20.00001162	64
+34	429	20.00001834	64
+34	485	20.00002506	64
+34	517	20.00003178	64
+34	561	23.00001162	64
+34	614	26.00001162	64
+34	666	29.00001162	64
+34	758	30.00003092	64
+34	822	32.00001162	64
+37	54	10	64
+37	712	30.00001834	64
+37	859	33.00001834	64
+41	51	10	40
+41	710	30.00001834	40
+41	858	33.00001834	40
+42	105	10.00001258	40
+42	147	10.0000193	40
+42	213	13.00001162	40
+42	265	16.00001162	40
+42	317	19.00001162	40
+42	384	20.00001162	28
+42	434	20.00001834	40
+42	489	20.00002506	40
+42	520	20.00003178	40
+42	565	23.00001162	40
+42	618	26.00001162	40
+42	670	29.00001162	40
+42	760	30.00003092	40
+42	826	32.00001162	40
+44	40	10	20
+44	188	13	20
+44	240	16	20
+44	292	19	20
+44	348	20	20
+44	350	20	20
+44	540	23	20
+44	593	26	20
+44	645	29	20
+44	801	32	20
+45	118	10.00001258	20
+45	160	10.0000193	20
+45	478	20.0000242	20
+45	749	30.00002996	20
+45	791	30.00003668	20
+46	118	10.00001258	1
+46	160	10.0000193	2
+46	478	20.0000242	3
+46	749	30.00002996	4
+46	791	30.00003668	5
+54	61	10.00000576	64
+54	195	13.00000576	64
+54	247	16.00000576	64
+54	299	19.00000576	64
+54	365	20.00000576	64
+54	399	20.00001248	64
+54	459	20.0000192	64
+54	547	23.00000576	64
+54	600	26.00000576	64
+54	652	29.00000576	64
+54	808	32.00000576	64
+55	103	10.00001258	64
+55	145	10.0000193	64
+55	473	20.0000242	64
+55	736	30.00002996	64
+55	778	30.00003668	64
+56	103	10.00001258	64
+56	145	10.0000193	64
+56	473	20.0000242	64
+56	736	30.00002996	64
+56	778	30.00003668	64
+59	55	10	64
+59	193	13	64
+59	245	16	64
+59	297	19	64
+59	357	20	64
+59	362	20	64
+59	363	20	64
+59	545	23	64
+59	598	26	64
+59	650	29	64
+59	806	32	64
+63	52	10	40
+63	192	13	40
+63	244	16	40
+63	296	19	40
+63	354	20	28
+63	360	20	40
+63	361	20	40
+63	544	23	40
+63	597	26	40
+63	649	29	40
+63	805	32	40
+64	106	10.00001258	40
+64	148	10.0000193	40
+64	474	20.0000242	40
+64	739	30.00002996	40
+64	781	30.00003668	40
+72	88	10.00001162	64
+72	130	10.00001834	64
+72	172	10.00002506	64
+72	210	13.00001162	64
+72	262	16.00001162	64
+72	314	19.00001162	64
+72	381	20.00001162	64
+72	430	20.00001834	64
+72	486	20.00002506	64
+72	518	20.00003178	64
+72	562	23.00001162	64
+72	615	26.00001162	64
+72	667	29.00001162	64
+72	737	30.00002996	64
+72	779	30.00003668	64
+72	823	32.00001162	64
+73	88	10.00001162	64
+73	130	10.00001834	64
+73	172	10.00002506	64
+73	210	13.00001162	64
+73	262	16.00001162	64
+73	314	19.00001162	64
+73	381	20.00001162	64
+73	430	20.00001834	64
+73	486	20.00002506	64
+73	518	20.00003178	64
+73	562	23.00001162	64
+73	615	26.00001162	64
+73	667	29.00001162	64
+73	737	30.00002996	64
+73	779	30.00003668	64
+73	823	32.00001162	64
+81	90	10.00001162	40
+81	132	10.00001834	40
+81	174	10.00002506	40
+81	214	13.00001162	40
+81	266	16.00001162	40
+81	318	19.00001162	40
+81	385	20.00001162	28
+81	435	20.00001834	40
+81	490	20.00002506	40
+81	521	20.00003178	40
+81	566	23.00001162	40
+81	619	26.00001162	40
+81	671	29.00001162	40
+81	740	30.00002996	40
+81	782	30.00003668	40
+81	827	32.00001162	40
+89	89	10.00001162	64
+89	131	10.00001834	64
+89	173	10.00002506	64
+89	211	13.00001162	64
+89	263	16.00001162	64
+89	315	19.00001162	64
+89	382	20.00001162	64
+89	431	20.00001834	64
+89	487	20.00002506	64
+89	519	20.00003178	64
+89	563	23.00001162	64
+89	616	26.00001162	64
+89	668	29.00001162	64
+89	738	30.00002996	64
+89	780	30.00003668	64
+89	824	32.00001162	64
+90	89	10.00001162	64
+90	131	10.00001834	64
+90	173	10.00002506	64
+90	211	13.00001162	64
+90	263	16.00001162	64
+90	315	19.00001162	64
+90	382	20.00001162	64
+90	431	20.00001834	64
+90	487	20.00002506	64
+90	519	20.00003178	64
+90	563	23.00001162	64
+90	616	26.00001162	64
+90	668	29.00001162	64
+90	738	30.00002996	64
+90	780	30.00003668	64
+90	824	32.00001162	64
+98	91	10.00001162	40
+98	133	10.00001834	40
+98	175	10.00002506	40
+98	215	13.00001162	40
+98	267	16.00001162	40
+98	319	19.00001162	40
+98	386	20.00001162	28
+98	436	20.00001834	40
+98	491	20.00002506	40
+98	522	20.00003178	40
+98	567	23.00001162	40
+98	620	26.00001162	40
+98	672	29.00001162	40
+98	741	30.00002996	40
+98	783	30.00003668	40
+98	828	32.00001162	40
+100	96	10.00001253	64
+100	138	10.00001925	64
+100	204	13.00001157	64
+100	256	16.00001157	64
+100	308	19.00001157	64
+100	375	20.00001157	64
+100	424	20.00001829	64
+100	484	20.00002501	64
+100	556	23.00001157	64
+100	609	26.00001157	64
+100	661	29.00001157	64
+100	752	30.00003087	64
+100	817	32.00001157	64
+101	62	10.00000581	64
+101	453	20.00001839	64
+101	717	30.00002415	64
+102	62	10.00000581	64
+102	453	20.00001839	64
+102	717	30.00002415	64
+105	72	10.00000581	64
+105	76	10.00000581	64
+105	198	13.00000581	64
+105	250	16.00000581	64
+105	302	19.00000581	64
+105	368	20.00000581	64
+105	406	20.00001253	64
+105	466	20.00001925	64
+105	550	23.00000581	64
+105	603	26.00000581	64
+105	655	29.00000581	64
+105	725	30.00002415	64
+105	811	32.00000581	64
+105	864	33.00002415	64
+111	97	10.00001253	64
+111	139	10.00001925	64
+111	205	13.00001157	64
+111	257	16.00001157	64
+111	309	19.00001157	64
+111	376	20.00001157	64
+111	425	20.00001829	64
+111	481	20.00002501	64
+111	514	20.00003173	64
+111	557	23.00001157	64
+111	610	26.00001157	64
+111	662	29.00001157	64
+111	753	30.00003087	64
+111	818	32.00001157	64
+112	63	10.00000581	64
+112	718	30.00002415	64
+112	862	33.00002415	64
+113	63	10.00000581	64
+113	718	30.00002415	64
+113	862	33.00002415	64
+116	68	10.00000581	64
+116	77	10.00000581	64
+116	199	13.00000581	64
+116	251	16.00000581	64
+116	303	19.00000581	64
+116	369	20.00000581	64
+116	407	20.00001253	64
+116	455	20.00001839	64
+116	467	20.00001925	64
+116	551	23.00000581	64
+116	604	26.00000581	64
+116	656	29.00000581	64
+116	721	30.00002415	64
+116	812	32.00000581	64
+122	98	10.00001253	64
+122	140	10.00001925	64
+122	472	20.00002415	64
+122	733	30.00002991	64
+122	775	30.00003663	64
+123	64	10.00000581	64
+123	196	13.00000581	64
+123	248	16.00000581	64
+123	300	19.00000581	64
+123	366	20.00000581	64
+123	400	20.00001253	64
+123	460	20.00001925	64
+123	548	23.00000581	64
+123	601	26.00000581	64
+123	653	29.00000581	64
+123	809	32.00000581	64
+124	64	10.00000581	64
+124	196	13.00000581	64
+124	248	16.00000581	64
+124	300	19.00000581	64
+124	366	20.00000581	64
+124	400	20.00001253	64
+124	460	20.00001925	64
+124	548	23.00000581	64
+124	601	26.00000581	64
+124	653	29.00000581	64
+124	809	32.00000581	64
+127	69	10.00000581	64
+127	73	10.00000581	64
+127	456	20.00001839	64
+127	722	30.00002415	64
+127	726	30.00002415	64
+133	86	10.00001157	64
+133	128	10.00001829	64
+133	170	10.00002501	64
+133	206	13.00001157	64
+133	258	16.00001157	64
+133	310	19.00001157	64
+133	377	20.00001157	64
+133	426	20.00001829	64
+133	482	20.00002501	64
+133	515	20.00003173	64
+133	558	23.00001157	64
+133	611	26.00001157	64
+133	663	29.00001157	64
+133	734	30.00002991	64
+133	776	30.00003663	64
+133	819	32.00001157	64
+138	70	10.00000581	64
+138	74	10.00000581	64
+138	78	10.00000581	64
+138	200	13.00000581	64
+138	252	16.00000581	64
+138	304	19.00000581	64
+138	370	20.00000581	64
+138	408	20.00001253	64
+138	457	20.00001839	64
+138	468	20.00001925	64
+138	552	23.00000581	64
+138	605	26.00000581	64
+138	657	29.00000581	64
+138	723	30.00002415	64
+138	727	30.00002415	64
+138	813	32.00000581	64
+144	87	10.00001157	64
+144	129	10.00001829	64
+144	171	10.00002501	64
+144	207	13.00001157	64
+144	259	16.00001157	64
+144	311	19.00001157	64
+144	378	20.00001157	64
+144	427	20.00001829	64
+144	483	20.00002501	64
+144	516	20.00003173	64
+144	559	23.00001157	64
+144	612	26.00001157	64
+144	664	29.00001157	64
+144	735	30.00002991	64
+144	777	30.00003663	64
+144	820	32.00001157	64
+149	71	10.00000581	64
+149	75	10.00000581	64
+149	79	10.00000581	64
+149	201	13.00000581	64
+149	253	16.00000581	64
+149	305	19.00000581	64
+149	371	20.00000581	64
+149	409	20.00001253	64
+149	458	20.00001839	64
+149	469	20.00001925	64
+149	553	23.00000581	64
+149	606	26.00000581	64
+149	658	29.00000581	64
+149	724	30.00002415	64
+149	728	30.00002415	64
+149	814	32.00000581	64
